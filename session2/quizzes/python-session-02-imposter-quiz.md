@@ -2,7 +2,7 @@
 
 ## Question 1
 
-In Session 2 Part 1, what does `csv.DictReader(file)` return for each row?
+What does `csv.DictReader(file)` return for each row?
 
 - A dictionary keyed by column names
 - A list of values only
@@ -17,7 +17,7 @@ Explanation: `DictReader` maps header names to row values.
 
 ## Question 2
 
-In the Part 1 exercise, what is the difference between `genres == "Action"` and `"Action" in genres`?
+What is the difference between `genres == "Action"` and `"Action" in genres`?
 
 - `==` is exact match, while `in` also matches multi-genre strings
 - They always return the same result
@@ -47,7 +47,7 @@ Explanation: Missing values are often empty strings and raise `ValueError`.
 
 ## Question 4
 
-In Session 2 Part 2 data-cleaning exercises, what should you use to write cleaned dictionary rows back to CSV?
+What should you use to write cleaned dictionary rows back to CSV?
 
 - `csv.DictWriter`
 - `csv.reader`
@@ -62,7 +62,7 @@ Explanation: `DictWriter` writes rows using explicit field names.
 
 ## Question 5
 
-In Session 2 Part 3, what must be true before using binary search (`O(log n)`) in the exercise examples?
+What must be true before using binary search (`O(log n)`)?
 
 - The data must be sorted
 - The data must have unique values only
