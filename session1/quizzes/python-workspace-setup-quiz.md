@@ -4,8 +4,8 @@
 
 Why is Python called “Python”?
 
-- It was named after a type of snake.
 - It was named after the comedy group *Monty Python*.
+- It was named after a type of snake 🐍.
 - It was named after a scientist called Python.
 - It is an acronym.
 
@@ -50,11 +50,11 @@ Explanation: `requirements.txt` ensures everyone installs the same packages.
 What is a dependency?
 
 - A Python error.
-- A library or package your project needs to run.
 - A type of variable.
 - A folder in your project.
+- A library or package your project needs to run.
 
-Answer: 2
+Answer: 4
 Type: single
 Time: 30
 Explanation: Dependencies are external libraries required by your project.
@@ -65,11 +65,11 @@ Explanation: Dependencies are external libraries required by your project.
 What is the problem if you run `pip install` without a virtual environment?
 
 - It installs packages too slowly.
-- It installs packages globally and can cause conflicts between projects.
 - It deletes your files.
 - It only works once.
+- It installs packages globally and can cause conflicts between projects.
 
-Answer: 2
+Answer: 4
 Type: single
 Time: 45
 Explanation: Without a virtual environment, packages are installed globally and may conflict with other projects.
@@ -80,11 +80,11 @@ Explanation: Without a virtual environment, packages are installed globally and 
 What does `cd` mean in the terminal?
 
 - Compile data
-- Change directory
 - Create dependency
+- Change directory
 - Coffee dispenser ☕
 
-Answer: 2
+Answer: 3
 Type: single
 Time: 30
 Explanation: `cd` means change directory (move between folders). Sadly, it does not make coffee.
