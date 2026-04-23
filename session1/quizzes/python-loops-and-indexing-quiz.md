@@ -4,10 +4,10 @@
 
 What is the purpose of a counter in Python loops?
 
-- To store text values
-- To stop a loop
-- To store a list
-- To track how many times something happens
+- To keep the current element value for printing only
+- To immediately exit the loop after one condition
+- To collect all loop results into a new list
+- To count how many times an event/condition occurs
 
 Answer: 4
 Type: single
@@ -20,7 +20,7 @@ What does an index represent in a list?
 
 - The value of the element
 - The memory location
-- The position of the element (starting from 0)
+- The position of the element
 - The length of the list
 
 Answer: 3
@@ -30,17 +30,17 @@ Explanation: Index refers to the position of an element in a list, starting at 0
 
 ## Question 3
 
-Which loop is used to iterate over elements in a list?
+You need both the index and value while iterating through a list. Which pattern is most appropriate?
 
-- for loop
-- while loop only
-- if statement
-- function
+- `for item in data:`
+- `if i < len(data):`
+- `for i in range(len(data))`: then use `data[i]`
+- `while True:` without updating an index
 
-Answer: 1
+Answer: 3
 Type: single
 Time: 45
-Explanation: A for loop is commonly used to iterate through list elements.
+Explanation: `range(len(data))` gives valid indexes, and data[i] gives the corresponding values.
 
 ## Question 4
 
@@ -88,7 +88,7 @@ Explanation: A nested loop is a loop inside another loop.
 
 Why do we reset col_index = 0 after each row in a matrix?
 
-- To stop the program
+- To stop the program on last row
 - To restart counting columns for the new row
 - To delete values
 - To reduce memory usage

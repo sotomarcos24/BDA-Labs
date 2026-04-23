@@ -52,7 +52,9 @@ This part of the class is a recap of the basics. We will reuse these steps in fu
 - `pip`: Python’s package manager; it installs libraries like `huggingface_hub` or `datasets`.
 - `requirements.txt`: a list of required Python packages for the project. It lets everyone install the same dependencies and reproduce the same setup.
 - `README.md`: a simple project file where you document what you built, what worked, and what is pending (useful for tracking progress). Not sure about Markdown syntax? [Check here](https://www.markdownguide.org/basic-syntax/).
-- `session_solutions/`: the folder you need to create to store your answers for each tutorial part (no need to submit now, but you can share it with Stelios later, for example for homework).
+- `solutions/`: the folder you need to create to store your answers for each tutorial part (no need to submit now, but you can share it with Stelios later, for example for homework).
+- `session_solutions/`: reference solutions provided by Stelios. Use them only to review your work after you attempt the tasks.
+- Naming convention for your files in `solutions/`: use `exercise-<session>-<part>.py` (for example, `exercise-01-02.py`).
 
 You will need to navigate folders in the terminal using `cd`.
 

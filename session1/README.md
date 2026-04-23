@@ -21,5 +21,6 @@ By the end of Session 1, you should be able to:
 ### Notes
 
 - Keep your own solutions in separate local files inside `solutions/`.
+- Use exercise-style names in `solutions/` (for example `exercise-01-02.py`).
 - Update this `README.md` with progress and notes.
 - Do not commit `.venv/` to GitHub ([check how](https://docs.github.com/en/get-started/git-basics/ignoring-files)).

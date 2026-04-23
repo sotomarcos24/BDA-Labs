@@ -35,13 +35,13 @@ On Windows (VS Code terminal):
   `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
   Then run: `.venv\Scripts\Activate.ps1`
 
-3. Create (or open) your solution file:
+3. Create (or open) your exercise file:
 
 ```txt
-session2/session_solutions/session-02-part-01.py
+session2/solutions/exercise-02-01.py
 ```
 
-If `session_solutions/` does not exist yet, create it first.
+If `solutions/` does not exist yet, create it first.
 
 #### 3. Basics you should know
 
@@ -49,6 +49,7 @@ If `session_solutions/` does not exist yet, create it first.
 - Keys come from the header row (column names).
 - Values are still strings, so numeric conversion is manual when needed.
 - Dictionary access is clearer than index access when column names are meaningful.
+- If you see `...` in a starter code snippet, fill up the missing code before running it.
 
 #### 4. Example 1: Read CSV rows as dictionaries
 
@@ -95,7 +96,7 @@ Copy-Item .\tmp_incomplete\movies.csv .\movies_incomplete.csv
 
 Make sure the files are in your current folder. Then run the following script.
 
-File: `session2/session_solutions/session-02-part-01.py`
+File: `session2/solutions/exercise-02-01.py`
 
 ```python
 import csv
@@ -128,7 +129,7 @@ Expected output shape:
 
 #### 5. Example 2: Print one named column
 
-File: `session2/session_solutions/session-02-part-01.py`
+File: `session2/solutions/exercise-02-01.py`
 
 ```python
 import csv
@@ -165,7 +166,7 @@ Thriller
 
 Count how many rows have `year == "2020"`:
 
-File: `session2/session_solutions/session-02-part-01.py`
+File: `session2/solutions/exercise-02-01.py`
 
 ```python
 import csv
@@ -196,7 +197,7 @@ print(count)
 
 Find the first row where `genres` contains `Action`:
 
-File: `session2/session_solutions/session-02-part-01.py`
+File: `session2/solutions/exercise-02-01.py`
 
 ```python
 import csv
@@ -227,7 +228,7 @@ with open("movies.csv", "r") as file:
 Add your answers to:
 
 ```txt
-session2/session_solutions/session-02-part-01.py
+session2/solutions/exercise-02-01.py
 ```
 
 Tasks for `Birkbeck/movies`:
@@ -276,9 +277,9 @@ Keep your session structure consistent:
 ```txt
 session2/
   README.md
-  session_solutions/
-    session-02-part-01.py
-    session-02-part-02.py
+  solutions/
+    exercise-02-01.py
+    exercise-02-02.py
 ```
 
 Update `README.md` after completing this tutorial.
@@ -287,7 +288,7 @@ Example update:
 
 ```md
 ## Files
-- `session_solutions/session-02-part-01.py`
+- `solutions/exercise-02-01.py`
   - Goal: practice DictReader, key access, and first-match search
   - Status: completed
 

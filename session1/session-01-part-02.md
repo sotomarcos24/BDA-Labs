@@ -36,9 +36,9 @@ session1/solutions/
 
 Consider a list. Can you count all elements without using `len()`?
 
-Create a file named `count_items.py` with this code:
+Create a file in your `solutions/` folder with this code:
 
-File: `session1/solutions/count_items.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 data = [10, 20, 30, 40, 50]
@@ -58,7 +58,7 @@ Expected output:
 
 Now wrap the same logic in a function:
 
-File: `session1/solutions/loop_utils.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 def my_len(data):
@@ -68,14 +68,14 @@ def my_len(data):
     return count
 ```
 
-Save this function in a different file, for example `loop_utils.py` (same folder).
+Save this function in a different file in the same folder, for example `exercise_01_02_lib.py`.
 
-Then import and use it from `count_items.py`:
+Then import and use it from your main script:
 
-File: `session1/solutions/count_items.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
-from loop_utils import my_len
+from exercise_01_02_lib import my_len
 
 print(my_len([10, 20, 30]))
 ```
@@ -86,12 +86,13 @@ Expected output:
 3
 ```
 
-> [!TIP]
+> [!NOTE]
 >
 > What are the time and space complexities of `my_len`?
 >
 > <details>
 >   <summary>Show answer</summary>
+>
 > Time: O(n)
 >
 > Space: O(1)
@@ -102,17 +103,13 @@ Expected output:
 
 #### 5. Example 2: Sum elements
 
-Let's sum all elements using a `total` variable.
-
-File: `session1/solutions/sum_items.py`
+Let's sum all elements using a `total` variable.  File: `session1/solutions/exercise-01-02.py`, Fill up the missing code.
 
 ```python
 data = [10, 20, 30, 40, 50]
 
 total = 0
-for item in data:
-    total += item
-
+...
 print(total)
 ```
 
@@ -122,11 +119,28 @@ Expected output:
 150
 ```
 
+> Solution
+>
+> <details>
+> <summary>Show answer</summary>
+>
 > `i += 1` increments by 1, while `total += element` accumulates values.
+>
+> ```python
+> data = [10, 20, 30, 40, 50]
+> 
+> total = 0
+> for item in data:
+>     total += item
+> 
+> print(total)
+> ```
+>
+> </details>
 
-Good practice: wrap reusable logic into functions in `loop_utils.py` and call them from files like `sum_items.py`.
+Good practice: wrap reusable logic into helper functions (for example `exercise_01_02_lib.py`) and import them into your main script.
 
-> [!TIP]
+> [!NOTE]
 >
 > What are the time and space complexities of the script above?
 >
@@ -143,17 +157,13 @@ Good practice: wrap reusable logic into functions in `loop_utils.py` and call th
 
 Let's find the position of a target value.
 
-File: `session1/solutions/find_position.py`
+File: `session1/solutions/exercise-01-02.py`. Fill up the missing code.
 
 ```python
 data = [10, 20, 30, 40, 50]
 
 pointer = 0
-for item in data:
-    if item == 30:
-        print(pointer)
-        break
-    pointer += 1
+...
 ```
 
 Expected output:
@@ -162,9 +172,29 @@ Expected output:
 2
 ```
 
+> Solution
+>
+> <details>
+> <summary>Show answer</summary>
+>
+> We use a position counter (`pointer`) and stop at the first match using `break`.
+>
+> ```python
+> data = [10, 20, 30, 40, 50]
+> 
+> pointer = 0
+> for item in data:
+>     if item == 30:
+>         print(pointer)
+>         break
+>     pointer += 1
+> ```
+>
+> </details>
+
 Another common way to work with positions is:
 
-File: `session1/solutions/find_position.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 data = [10, 20, 30, 40, 50]
@@ -177,7 +207,7 @@ for i in range(len(data)):
 
 Run this and explore the output.
 
-File: `session1/solutions/matrix_positions.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 matrix = [
@@ -193,7 +223,7 @@ for row in matrix:
 
 Now track row and column indexes explicitly:
 
-File: `session1/solutions/matrix_positions.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 matrix = [
@@ -241,39 +271,11 @@ col: 1 value: 40
 > <details>
 > <summary>Show answer</summary>
 >
->
 > Time: O(r * c) where `r` is the number of rows and `c` is the number of columns.
 >
 > Space: O(1)
 >
 > </details>
-
-### TEST
-
-<details> <summary>Show code</summary>
-
-Time: O(r * c) where `r` is the number of rows and `c` is the number of columns.
-
-```
-python
-matrix = [
-    [10, 20],
-    [30, 40]
-]
-
-row_index = 0
-col_index = 0
-
-for row in matrix:
-    print("row:", row_index)
-    for value in row:
-        print("col:", col_index, "value:", value)
-        col_index += 1
-    col_index = 0
-    row_index += 1
-```
-
-</details> 
 
 #### 8. Call Stelios 🥊
 
@@ -289,12 +291,12 @@ session1/solutions/
 
 Tasks:
 
-1. In `count_items.py`, write a function to count elements between `1` and `10` (inclusive) in `data = [30, 6, 9, 12, 15, 8]`.
-2. In `sum_items.py`, write a function to sum all even numbers in the same list.
-3. In `find_position.py`, write a function that returns the position of the first value equal to `12` in the same list. If the value is not found, return `-1`.
-4. In `matrix_positions.py`, for the matrix below, print the position of `25` as user-friendly coordinates `[2, 2]` (use 1-based indexing for rows and columns).
+1. Write a function to count elements between `1` and `10` (inclusive) in `data = [30, 6, 9, 12, 15, 8]`.
+2. Write a function to sum all even numbers in the same list.
+3. Write a function that returns the position of the first value equal to `12` in the same list. If the value is not found, return `-1`.
+4. For the matrix below, print the position of `25` as user-friendly coordinates `[2, 2]` (use 1-based indexing for rows and columns).
 
-File: `session1/solutions/matrix_positions.py`
+File: `session1/solutions/exercise-01-02.py`
 
 ```python
 matrix = [

@@ -4,12 +4,12 @@
 
 What does `csv.reader(file)` return?
 
-- A dictionary for each row
 - A list of strings for each row
+- A dictionary for each row
 - A single string
 - A DataFrame
 
-Answer: 2
+Answer: 1
 Type: single
 Time: 45
 Explanation: `csv.reader` returns each row as a list of strings.
@@ -48,10 +48,10 @@ How do you access the `genres` column when using `csv.reader`?
 
 - row["genres"]
 - row.genres
-- row[4]
 - reader["genres"]
+- row[4]
 
-Answer: 3
+Answer: 4
 Type: single
 Time: 45
 Explanation: With `csv.reader`, columns are accessed by index, e.g. `row[4]`.
@@ -89,11 +89,11 @@ Explanation: Each row is processed once, so the time complexity is O(n).
 What is a limitation of using raw `csv.reader`?
 
 - It cannot read files
-- It requires index-based access instead of named columns
 - It uses too much memory
 - It only works on Windows
+- It requires index-based access
 
-Answer: 2
+Answer: 4
 Type: single
 Time: 45
 Explanation: `csv.reader` uses indexes, which makes code less readable compared to named access.
@@ -132,10 +132,10 @@ What is the purpose of the `hf download` command?
 
 - To run Python scripts
 - To install packages
+- To download datasets from anywhere
 - To download datasets from Hugging Face
-- To convert CSV to JSON
 
-Answer: 3
+Answer: 4
 Type: single
 Time: 45
 Explanation: `hf download` retrieves dataset files from Hugging Face repositories.

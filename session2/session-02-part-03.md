@@ -31,10 +31,10 @@ On Windows (VS Code terminal):
   `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
   Then run: `.venv\Scripts\Activate.ps1`
 
-3. Create (or open) your solution file:
+3. Create (or open) your exercise file:
 
 ```txt
-session2/session_solutions/session-02-part-03.py
+session2/solutions/exercise-02-03.py
 ```
 
 #### 3. Basics you should know
@@ -44,12 +44,13 @@ session2/session_solutions/session-02-part-03.py
 - `O(n^2)`: often appears with two nested loops over the same input.
 - `O(2^n)`: branching recursion where each level doubles work.
 - `O(n!)`: explores all permutations/orderings.
+- If you see `...` in a starter code snippet, fill up the missing code before running it.
 
 #### 4. Example 1: Binary search (`O(log n)`)
 
 Binary search works on **sorted** data.
 
-File: `session2/session_solutions/session-02-part-03.py`
+File: `session2/solutions/exercise-02-03.py`
 
 ```python
 def binary_search(data, target):
@@ -98,7 +99,7 @@ print(binary_search(nums, 23))  # 5
 
 #### 5. Example 2: Merge sort shape (`O(n log n)`)
 
-File: `session2/session_solutions/session-02-part-03.py`
+File: `session2/solutions/exercise-02-03.py`
 
 ```python
 def merge(left, right):
@@ -152,7 +153,7 @@ print(merge_sort([7, 2, 9, 1, 5, 3]))
 
 #### 6. Example 3: Nested loop count (`O(n^2)`)
 
-File: `session2/session_solutions/session-02-part-03.py`
+File: `session2/solutions/exercise-02-03.py`
 
 ```python
 def count_pairs(data):
@@ -181,7 +182,7 @@ print(count_pairs([10, 20, 30, 40]))
 
 #### 7. Example 4: Fibonacci recursion (`O(2^n)`)
 
-File: `session2/session_solutions/session-02-part-03.py`
+File: `session2/solutions/exercise-02-03.py`
 
 ```python
 def fib(n):
@@ -206,7 +207,7 @@ print(fib(6))
 
 #### 8. Example 5: Permutation count (`O(n!)`)
 
-File: `session2/session_solutions/session-02-part-03.py`
+File: `session2/solutions/exercise-02-03.py`
 
 ```python
 def permute_count(data):
@@ -240,7 +241,7 @@ print(permute_count([1, 2, 3, 4]))  # 24
 Add your answers to:
 
 ```txt
-session2/session_solutions/session-02-part-03.py
+session2/solutions/exercise-02-03.py
 ```
 
 Tasks:

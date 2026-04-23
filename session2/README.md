@@ -22,5 +22,6 @@ By the end of Session 2, you should be able to:
 ### Notes
 
 - Keep your own solutions in separate files inside `solutions/`.
+- Use exercise-style names in `solutions/` (for example `exercise-02-01.py`).
 - Update this `README.md` with progress and notes.
 - Do not commit `.venv/` to GitHub.

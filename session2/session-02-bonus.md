@@ -33,11 +33,12 @@ curl -sS -X POST "<PASTE_PRIVATE_URL_FROM_LAST_SLIDE>" -H "Content-Type: applica
 Create these files:
 
 ```txt
-session2/session_solutions/session-02-bonus.py
-session2/session_solutions/bonus_lib.py
+session2/solutions/exercise-02-bonus.py
+session2/solutions/exercise_02_bonus_lib.py
 ```
 
-Use the same `session_solutions/` folder created in Part 1.
+Use the same `solutions/` folder created in Part 1.
+Use underscores for the helper filename so it can be imported in Python.
 
 Starter code:
 
@@ -45,7 +46,7 @@ Starter code:
 >
 > I deployed an open model that goes to sleep 😴 when not in use. The first time you call it, it may take up to 2–3 minutes to wake up, please be patient. Hopefully, someone else has already woken it up before you.
 
-File: `session2/session_solutions/session-02-bonus.py`
+File: `session2/solutions/exercise-02-bonus.py`
 
 ```python
 import json
@@ -78,7 +79,7 @@ Use a small value like `n = 4` to avoid too many API calls.
 4. O(n) local task:
    - find the longest model response by character length.
    - do not use `len()` for this task.
-   - create your own function in `bonus_lib.py`, then import and use it in `session-02-bonus.py`.
+   - create your own helper function in a separate Python file, then import and use it in your main script.
 5. O(n^2) model task:
    - for every pair of responses `(i, j)`, ask the model: "Are these two responses semantically similar? Answer yes or no."
    - count how many pairs get `yes`.
@@ -103,7 +104,7 @@ Create a **public GitHub repository** for your coursework. It is better to use o
 
 For this bonus, include your files:
 
-- `session2/session_solutions/session-02-bonus.py`
-- `session2/session_solutions/bonus_lib.py`
+- `session2/solutions/exercise-02-bonus.py`
+- `session2/solutions/exercise_02_bonus_lib.py`
 
 Submission for this bonus is to share your repository link in the class [MS Teams discussion forum](https://teams.microsoft.com/l/team/19%3AQLvZizpid98i6iNwF9_ee7RuoAUPC9YsOVoB3Yrq5YY1%40thread.tacv2/conversations?groupId=8b3672d8-2c38-4134-9725-3b779f03c2b0&tenantId=89d07f47-d258-463c-8700-635ffaeca38e), so Stelios and the rest of the students can see it.

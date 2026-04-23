@@ -11,10 +11,10 @@ Practice dataset loading, filtering, aggregation, and complexity analysis.
 Write your code in:
 
 ```txt
-session1/session_solutions/session-01-homework.py
+session1/solutions/exercise-01-homework.py
 ```
 
-Use the same `session_solutions/` folder created in Part 1.
+Use the same `solutions/` folder created in Part 1.
 
 #### 3. Dataset
 
@@ -45,7 +45,7 @@ Use: `movies.csv` from [Birkbeck/movies](https://huggingface.co/datasets/Birkbec
 
 ```md
 ## Homework (Session 1)
-- File: `session_solutions/session-01-homework.py`
+- File: `solutions/exercise-01-homework.py`
 - Status: completed
 - Notes:
   - computed averages for rating and one additional numeric column

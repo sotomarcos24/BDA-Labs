@@ -38,13 +38,13 @@ On Windows (VS Code terminal):
 pip install -r requirements.txt
 ```
 
-4. Create (or open) your solution file:
+4. Create (or open) your exercise file:
 
 ```txt
-session2/session_solutions/session-02-part-02.py
+session2/solutions/exercise-02-02.py
 ```
 
-If `session_solutions/` does not exist yet, create it first.
+If `solutions/` does not exist yet, create it first.
 
 #### 3. Download dataset
 
@@ -74,12 +74,13 @@ Expected result: `studio_ghibli_movies.csv` appears in your current folder.
 - `csv.DictReader(file)`: each row is a dictionary, so columns are accessed by name.
 - `csv.DictWriter(file, fieldnames=...)`: writes rows as dictionaries with explicit column names.
 - Missing data often appears as `""` (empty string).
+- If you see `...` in a starter code snippet, fill up the missing code before running it.
 
 #### 5. Example 1: `csv.reader` vs `csv.DictReader`
 
 Using `csv.reader` (index-based):
 
-File: `session2/session_solutions/session-02-part-02.py`
+File: `session2/solutions/exercise-02-02.py`
 
 ```python
 import csv
@@ -94,7 +95,7 @@ with open("studio_ghibli_movies.csv", "r") as file:
 
 Using `csv.DictReader` (name-based):
 
-File: `session2/session_solutions/session-02-part-02.py`
+File: `session2/solutions/exercise-02-02.py`
 
 ```python
 import csv
@@ -110,7 +111,7 @@ with open("studio_ghibli_movies.csv", "r") as file:
 
 Start with a simple in-memory list:
 
-File: `session2/session_solutions/session-02-part-02.py`
+File: `session2/solutions/exercise-02-02.py`
 
 ```python
 students = [
@@ -122,7 +123,7 @@ students = [
 
 Save raw data:
 
-File: `session2/session_solutions/session-02-part-02.py`
+File: `session2/solutions/exercise-02-02.py`
 
 ```python
 import csv
@@ -135,7 +136,7 @@ with open("students_raw.csv", "w", newline="") as file:
 
 Reopen, fix missing `email`, and save again:
 
-File: `session2/session_solutions/session-02-part-02.py`
+File: `session2/solutions/exercise-02-02.py`
 
 ```python
 import csv
@@ -160,7 +161,7 @@ with open("students_fixed.csv", "w", newline="") as out_file:
 Add your answers to:
 
 ```txt
-session2/session_solutions/session-02-part-02.py
+session2/solutions/exercise-02-02.py
 ```
 
 Use `studio_ghibli_movies.csv`.
@@ -215,9 +216,9 @@ Keep your session structure consistent:
 ```txt
 session2/
   README.md
-  session_solutions/
-    session-02-part-01.py
-    session-02-part-02.py
+  solutions/
+    exercise-02-01.py
+    exercise-02-02.py
 ```
 
 Update `README.md` after completing this tutorial.
@@ -226,7 +227,7 @@ Example update:
 
 ```md
 ## Files
-- `session_solutions/session-02-part-02.py`
+- `solutions/exercise-02-02.py`
   - Goal: compare reader vs DictReader and clean/write CSV data
   - Status: completed
 

@@ -16,20 +16,7 @@ In this tutorial, you will:
 Before starting:
 
 1. Open the `session1` folder in Visual Studio Code.
-2. Activate your virtual environment:
-
-```bash
-source .venv/bin/activate
-```
-
-On Windows (VS Code terminal):
-
-- PowerShell: `.venv\Scripts\Activate.ps1` (may be blocked by execution policy on some machines)
-- Command Prompt: `.venv\Scripts\activate.bat`
-- If activation is blocked, run scripts directly with: `.venv\Scripts\python.exe your_script.py`
-- Optional temporary PowerShell bypass (current session only):
-  `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
-  Then run: `.venv\Scripts\Activate.ps1`
+2. Activate your virtual environment.
 
 3. Confirm dependencies are installed:
 
@@ -37,20 +24,19 @@ On Windows (VS Code terminal):
 pip install -r requirements.txt
 ```
 
-For this tutorial, the `hf` command requires `huggingface_hub`.
-Make sure your `requirements.txt` includes:
+For this tutorial, the `hf` command requires `huggingface_hub`. Make sure your `requirements.txt` includes:
 
 ```txt
 huggingface_hub
 ```
 
-4. Create (or open) your solution file:
+4. Create (or open) your exercise file:
 
 ```txt
-session1/session_solutions/session-01-part-03.py
+session1/solutions/exercise-01-03.py
 ```
 
-If `session_solutions/` does not exist yet, create it first (see Part 1).
+If `solutions/` does not exist yet, create it first (see Part 1).
 
 #### 3. Basics you should know
 
@@ -69,21 +55,11 @@ Dataset:
 
 - [Dataset: Birkbeck/movies](https://huggingface.co/datasets/Birkbeck/movies)
 
-Download the dataset file:
+Download the dataset file using the following command in terminal (Mac or Windows):
 
 ```bash
-hf download Birkbeck/movies movies.csv \
-  --repo-type dataset \
-  --local-dir .
-```
-
-On Windows PowerShell, run the same command in one line:
-
-```powershell
 hf download Birkbeck/movies movies.csv --repo-type dataset --local-dir .
 ```
-
-Optional: if the download fails due to environment/access limits, run `hf auth login` and try again.
 
 Expected result: `movies.csv` appears in your current folder.
 
@@ -91,7 +67,7 @@ Expected result: `movies.csv` appears in your current folder.
 
 Let's load the file in the computer memory. This prints each CSV row as a Python list.
 
-File: `session1/session_solutions/session-01-part-03.py`
+File: `session1/solutions/exercise-01-03.py`
 
 ```python
 import csv
@@ -128,7 +104,7 @@ Example output shape:
 
 Check what `reader` is:
 
-File: `session1/session_solutions/session-01-part-03.py`
+File: `session1/solutions/exercise-01-03.py`
 
 ```python
 import csv
@@ -146,7 +122,7 @@ Example output:
 
 Print the `genres` column (index `4`):
 
-File: `session1/session_solutions/session-01-part-03.py`
+File: `session1/solutions/exercise-01-03.py`
 
 ```python
 import csv
@@ -173,10 +149,10 @@ with open("movies.csv", "r") as file:
 
 #### 7. Exercise 1
 
-Write all answers in:
+Write all answers in your `solutions/` folder:
 
 ```txt
-session1/session_solutions/session-01-part-03.py
+session1/solutions/exercise-01-03.py
 ```
 
 Tasks:
@@ -189,7 +165,9 @@ Tasks:
 
 #### 8. Exercise 2
 
-Use the [dataset here](https://huggingface.co/datasets/Birkbeck/movies_incomplete). There is a small issue with a missing record, can you find it? Where is it (row/column).
+Use the [dataset here](https://huggingface.co/datasets/Birkbeck/movies_incomplete). You will need to download the data using the appropriate `hf` command. 
+
+There is a small issue with a missing record, can you find it? Where is it (row/column).
 
 > [!IMPORTANT]
 >

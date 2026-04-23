@@ -55,12 +55,12 @@ hf download Birkbeck/studio_ghibli_movies studio_ghibli_movies.csv \
 Create:
 
 ```txt
-session2/session_solutions/session-02-homework.py
+session2/solutions/exercise-02-homework.py
 ```
 
 Minimal example:
 
-File: `session2/session_solutions/session-02-homework.py`
+File: `session2/solutions/exercise-02-homework.py`
 
 ```python
 import json
@@ -130,7 +130,7 @@ Create a **public GitHub repository** for your coursework. It is better to use o
 
 Include:
 
-- `session2/session_solutions/session-02-homework.py`
+- `session2/solutions/exercise-02-homework.py`
 - optional: `studio_ghibli_movies_ai_clean.csv`
 
 Submission for this homework is to share your repository link in the class [MS Teams discussion forum](https://teams.microsoft.com/l/team/19%3AQLvZizpid98i6iNwF9_ee7RuoAUPC9YsOVoB3Yrq5YY1%40thread.tacv2/conversations?groupId=8b3672d8-2c38-4134-9725-3b779f03c2b0&tenantId=89d07f47-d258-463c-8700-635ffaeca38e), so Stelios and the rest of the students can see it.
