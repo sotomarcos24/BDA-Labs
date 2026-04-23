@@ -165,6 +165,12 @@ Tasks:
 
 #### 8. Exercise 2
 
+Use this file:
+
+```txt
+session1/solutions/exercise-01-03.py
+```
+
 Use the [dataset here](https://huggingface.co/datasets/Birkbeck/movies_incomplete). You will need to download the data using the appropriate `hf` command. 
 
 There is a small issue with a missing record, can you find it? Where is it (row/column).

@@ -149,9 +149,9 @@ For now, minimise the current VS Code window. On your Desktop (or any folder you
 1. Open a new VS Code window and open the `test-folder`.
 2. Create and activate a virtual environment.
 3. Create a `requirements.txt` file, add the `requests` library (`2.32.3`), and install it.
-4. Create a file named `solution_part1.py` and run the script below.
+4. Create a file named `exercise-01-01.py` and run the script below.
 
-File: `test-folder/solution_part1.py`
+File: `test-folder/exercise-01-01.py`
 
 ```python
 import re
@@ -165,7 +165,7 @@ match = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
 print(match.group(1).strip() if match else "No title found")
 ```
 
-This exerice is more about learning how to manage your `.venv`. When finished, keep `solution_part1.py` as your solution file.
+This exercise is more about learning how to manage your `.venv`. When finished, keep `exercise-01-01.py` as your solution file.
 
 > [!TIP]
 >
