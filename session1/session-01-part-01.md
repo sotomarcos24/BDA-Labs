@@ -178,15 +178,27 @@ pip install quizmd
 ```
 
 >  Run the quiz in your terminal and ask Stelios for help if you’re unsure. Solutions are in the `quizzes` folder but don't see them yet.
+>
 
-Start the first quiz by selecting your preferred theme. 
+Start the quiz by selecting a theme that matches your terminal:
 
-- Use `--theme light` if your terminal has a white/light background.
-- Use `--theme dark` if your terminal has a dark background.
+Use the default theme (no --theme needed)
+```
+quizmd quizzes/python-workspace-setup-quiz.md
+```
+Or choose a theme
+
+Use `--theme light` if your terminal has a light background or `--theme dark` if your terminal has a dark background.
 
 ```
 quizmd --theme light quizzes/python-workspace-setup-quiz.md
 quizmd --theme dark quizzes/python-workspace-setup-quiz.md
+```
+
+For a focus-mode, try:
+
+```
+quizmd --full-screen --theme dark quizzes/python-workspace-setup-quiz.md
 ```
 
 For accessibility use this: `quizmd --no-color quizzes/python-workspace-setup-quiz.md`
