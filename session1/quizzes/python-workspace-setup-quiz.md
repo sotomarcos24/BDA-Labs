@@ -9,7 +9,7 @@ Why is Python called “Python”?
 - It was named after a scientist called Python.
 - It is an acronym.
 
-Answer: 2
+Answer: 1
 Type: single
 Time: 45
 Explanation: Python was named after the British comedy group *Monty Python*, not the snake.
