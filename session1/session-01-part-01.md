@@ -8,8 +8,7 @@ In this first tutorial, we will prepare your workspace. Pay attention, as you wi
 
 #### 2. Workspace setup
 
-1. Install Git from [here](https://git-scm.com/install/).
-   * For Mac: `brew install git`. For Windows: download and install it.
+1. Install Git if it is not already installed from [here](https://git-scm.com/install/). For Mac: `brew install git`. For Windows: download and install it.
 2. Install [Visual Studio Code](https://code.visualstudio.com/) (or another editor you prefer). I will use VS Code in this module. After installing Git, restart VS Code if it was already open.
 3. Open a terminal.
 4. Clone the class repository:
@@ -77,22 +76,18 @@ cd ..
 
 #### 5. Create and manage a virtual environment
 
-Create a virtual environment:
+You will need a virtual environment to install the required packages. 
 
-```bash
-python3 -m venv .venv
-```
+> [!TIP]
+>
+> Make sure you are in the correct folder before creating it. You can create one environment per session (recommended), or use one environment for the entire `bda` project. 
+>
+> Navigate to the folder using `cd session1`.
 
-On Windows, you can also run:
+Create a virtual environment (Mac or Windows):
 
 ```powershell
 python -m venv .venv
-```
-
-Alternative on some Windows installations:
-
-```powershell
-py -m venv .venv
 ```
 
 Activate the environment:
@@ -102,12 +97,12 @@ source .venv/bin/activate
 ```
 
 > On Windows (VS Code terminal):
+>
 > - PowerShell: `.venv\Scripts\Activate.ps1` (may be blocked by execution policy on some machines)
-> - Command Prompt: `.venv\Scripts\activate.bat`
-> - If activation is blocked, run scripts directly with: `.venv\Scripts\python.exe your_script.py`
 > - Optional temporary PowerShell bypass (current session only):
 >   `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
 >   Then run: `.venv\Scripts\Activate.ps1`
+> - If activation is blocked, run scripts directly with: `.venv\Scripts\python.exe your_script.py`
 
 Deactivate it when needed:
 
@@ -118,18 +113,15 @@ deactivate
 Now check the `requirements.txt` file. It contains the dependencies we need:
 
 ```txt
-huggingface_hub
-datasets
+huggingface_hub==0.23.4
+datasets==2.20.0
+requests==2.32.3
+quizmd
 ```
 
-> A **`requirements.txt`** file lists all Python packages a project needs. It helps everyone recreate the same environment.
+> [!TIP]
 >
-> It’s better to specify exact versions:
->
-> ```txt
-> huggingface_hub==0.23.4
-> datasets==2.20.0
-> ```
+> A **`requirements.txt`** file lists all Python packages a project needs. It helps everyone recreate the same environment. It’s better to specify exact versions.
 
 #### 6. Install dependencies
 
@@ -146,15 +138,15 @@ python3 -m ensurepip --upgrade
 python3 -m pip install --upgrade pip
 ```
 
-You are now ready.
+Check the output to ensure everything installed successfully. Don't worry about warnings. You are now ready to proceed. You can use the `clear` command to clear the terminal. Try it out.
 
 #### 7. Exercise 1
 
-Create an empty folder called `test-folder` on your Desktop.
+For now, minimise the current VS Code window. On your Desktop (or any folder you prefer), create a new folder called `test-folder`.
 
-1. Open a new VS Code window and select `test-folder`.
-2. Create and activate a new virtual environment.
-3. Make sure `requests` is installed (included in `requirements.txt`).
+1. Open a new VS Code window and open the `test-folder`.
+2. Create and activate a virtual environment.
+3. Create a `requirements.txt` file, add the `requests` library (`2.32.3`), and install it.
 4. Create a file named `solution_part1.py` and run the script below.
 
 ```python
@@ -169,105 +161,40 @@ match = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
 print(match.group(1).strip() if match else "No title found")
 ```
 
-This exerice is more about learning how to manage your `venv`. When finished, keep `solution_part1.py` as your solution file.
+This exerice is more about learning how to manage your `.venv`. When finished, keep `solution_part1.py` as your solution file.
 
-#### 7.1. Create your solutions folder (do this once)
-
-From the `session1` folder, create your solutions folder:
-
-```bash
-mkdir -p session_solutions
-```
-
-On Windows PowerShell:
-
-```powershell
-mkdir session_solutions
-```
-
-Store your Session 1 files there, for example:
-
-```txt
-session1/session_solutions/session-01-part-01.py
-```
+> [!TIP]
+>
+> Why dot in `.venv`? 
+>
+> The `.` makes the folder hidden by default, keeping your project directory clean.
 
 #### 8. Quiz
 
-Install `quizmd` directly from PyPI:
+`quizmd` is a command-line interface (CLI) to run interactive quizzes in the lab (made by Stelios 🙂). You can still install it like this.
 
 ```bash
 pip install quizmd
 ```
 
-Or install everything for this session with:
+>  Run the quiz in your terminal and ask Stelios for help if you’re unsure. Solutions are in the `quizzes` folder but don't see them yet.
 
-```bash
-pip install -r requirements.txt
-```
-
->  `quizmd` is a command-line interface (CLI) to run interactive quizzes in the lab (made by Stelios 🙂). Run the quiz in your terminal and ask Stelios for help if you’re unsure. Solutions are in the `quizzes` folder but don't see them yet.
-
-Install the `requirements.txt`  and the run the quiz by choosing your preferred theme:
-
-```bash
-quizmd --theme light quizzes/python-workspace-setup-quiz.md
-quizmd --theme dark quizzes/python-workspace-setup-quiz.md
-```
+Start the first quiz by selecting your preferred theme. 
 
 - Use `--theme light` if your terminal has a white/light background.
 - Use `--theme dark` if your terminal has a dark background.
 
-> For accessibility use this: `quizmd --no-color quizzes/python-workspace-setup-quiz.md`
+```
+quizmd --theme light quizzes/python-workspace-setup-quiz.md
+quizmd --theme dark quizzes/python-workspace-setup-quiz.md
+```
+
+For accessibility use this: `quizmd --no-color quizzes/python-workspace-setup-quiz.md`
 
 > [!IMPORTANT]
 >
-> Review the quiz rules before you start. Use the `space bar` to select the correct option, then `press Enter` to move to the next question.
+> Review the quiz rules before you start. 
+>
+> Use the `space bar` to select an option, then `press Enter` to move to the next question. Go ahead and complete the quiz 🎉!
 
-#### 9. Suggested structure
-
-Store your solutions in separate files, for example:
-
-```txt
-session1/
-  README.md
-  session_solutions/
-    session-01-part-01.py
-    session-01-part-02.py
-    session-01-part-03.py
-```
-
-Create a `README.md` and keep track of your progress and solutions.
-
-> This is good professional practice: it helps you stay organized, makes grading easier, and creates a portfolio you can show later.
-
-#### 10. README example
-
-```md
-# BDA - Session 1 Solutions
-
-## Environment
-- Python version: 3.x.x
-- Virtual environment: `.venv`
-- Installed packages:
-  - huggingface_hub
-  - datasets
-  - requests
-
-## Files
-- `session_solutions/session-01-part-01.py`
-  - Goal: verify environment setup and fetch/read CSV with `requests`
-  - Status: completed
-
-- `session_solutions/session-01-part-02.py`
-  - Goal: counters, loops, and indexing practice
-  - Status: add your status here
-
-- `session_solutions/session-01-part-03.py`
-  - Goal: read CSV and solve dataset tasks with pure Python
-  - Status: add your status here
-
-## Notes
-- Main issue faced: `pip` missing initially.
-- Fix applied: `python3 -m ensurepip --upgrade`.
-- Reflection: understanding virtual environments is essential for clean project setup.
-```
+Move to the next tutorial.
