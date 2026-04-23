@@ -45,6 +45,8 @@ Starter code:
 >
 > I deployed an open model that goes to sleep 😴 when not in use. The first time you call it, it may take up to 2–3 minutes to wake up, please be patient. Hopefully, someone else has already woken it up before you.
 
+File: `session2/session_solutions/session-02-bonus.py`
+
 ```python
 import json
 from urllib.request import Request, urlopen

@@ -95,6 +95,8 @@ Copy-Item .\tmp_incomplete\movies.csv .\movies_incomplete.csv
 
 Make sure the files are in your current folder. Then run the following script.
 
+File: `session2/session_solutions/session-02-part-01.py`
+
 ```python
 import csv
 
@@ -125,6 +127,8 @@ Expected output shape:
 > </details>
 
 #### 5. Example 2: Print one named column
+
+File: `session2/session_solutions/session-02-part-01.py`
 
 ```python
 import csv
@@ -161,6 +165,8 @@ Thriller
 
 Count how many rows have `year == "2020"`:
 
+File: `session2/session_solutions/session-02-part-01.py`
+
 ```python
 import csv
 
@@ -189,6 +195,8 @@ print(count)
 #### 7. Example 4: Find first match with `break`
 
 Find the first row where `genres` contains `Action`:
+
+File: `session2/session_solutions/session-02-part-01.py`
 
 ```python
 import csv

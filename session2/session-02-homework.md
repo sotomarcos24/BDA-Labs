@@ -60,6 +60,8 @@ session2/session_solutions/session-02-homework.py
 
 Minimal example:
 
+File: `session2/session_solutions/session-02-homework.py`
+
 ```python
 import json
 import os

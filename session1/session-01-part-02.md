@@ -17,13 +17,11 @@ Before starting:
 
 1. Open the `session1` folder in Visual Studio Code.
 2. Activate your virtual environment.
-3. Create (or open) your solution file:
+3. Open (or create) your solution files in:
 
 ```txt
-session1/session_solutions/session-01-part-02.py
+session1/solutions/
 ```
-
-If `session_solutions/` does not exist yet, create it first (see Part 1).
 
 #### 3. Basics you should know
 
@@ -38,7 +36,9 @@ If `session_solutions/` does not exist yet, create it first (see Part 1).
 
 Consider a list. Can you count all elements without using `len()`?
 
-Create a file named `tutorial2.py` with this code:
+Create a file named `count_items.py` with this code:
+
+File: `session1/solutions/count_items.py`
 
 ```python
 data = [10, 20, 30, 40, 50]
@@ -58,6 +58,8 @@ Expected output:
 
 Now wrap the same logic in a function:
 
+File: `session1/solutions/loop_utils.py`
+
 ```python
 def my_len(data):
     count = 0
@@ -66,12 +68,14 @@ def my_len(data):
     return count
 ```
 
-Save this function in a different file, for example `my_lib.py` (same folder).
+Save this function in a different file, for example `loop_utils.py` (same folder).
 
-Then import and use it from `tutorial2.py`:
+Then import and use it from `count_items.py`:
+
+File: `session1/solutions/count_items.py`
 
 ```python
-from my_lib import my_len
+from loop_utils import my_len
 
 print(my_len([10, 20, 30]))
 ```
@@ -100,6 +104,8 @@ Expected output:
 
 Let's sum all elements using a `total` variable.
 
+File: `session1/solutions/sum_items.py`
+
 ```python
 data = [10, 20, 30, 40, 50]
 
@@ -118,7 +124,7 @@ Expected output:
 
 > `i += 1` increments by 1, while `total += element` accumulates values.
 
-Good practice: wrap your reusable logic into functions in `my_lib.py` and use them in `tutorial2.py`.
+Good practice: wrap reusable logic into functions in `loop_utils.py` and call them from files like `sum_items.py`.
 
 > [!TIP]
 >
@@ -136,6 +142,8 @@ Good practice: wrap your reusable logic into functions in `my_lib.py` and use th
 #### 6. Example 3: Find position of a target value
 
 Let's find the position of a target value.
+
+File: `session1/solutions/find_position.py`
 
 ```python
 data = [10, 20, 30, 40, 50]
@@ -156,6 +164,8 @@ Expected output:
 
 Another common way to work with positions is:
 
+File: `session1/solutions/find_position.py`
+
 ```python
 data = [10, 20, 30, 40, 50]
 
@@ -166,6 +176,8 @@ for i in range(len(data)):
 #### 7. Example 4: Traverse a matrix with nested loops
 
 Run this and explore the output.
+
+File: `session1/solutions/matrix_positions.py`
 
 ```python
 matrix = [
@@ -180,6 +192,8 @@ for row in matrix:
 ```
 
 Now track row and column indexes explicitly:
+
+File: `session1/solutions/matrix_positions.py`
 
 ```python
 matrix = [
@@ -210,30 +224,56 @@ col: 0 value: 30
 col: 1 value: 40
 ```
 
-> [!TIP]
+> [!NOTE]
 >
 > Why do we set `col_index = 0` after each row?
 >
 > <details>
->   <summary>Show answer</summary>
+> <summary>Show answer</summary>
 >
 > - Because each new row starts from the first column again.
 > - If you do not reset it, column indexes continue from the previous row and become incorrect.
 >
 > </details>
-
-> [!TIP]
 >
 > What are the time and space complexities of the script above?
 >
 > <details>
->   <summary>Show answer</summary>
+> <summary>Show answer</summary>
+>
 >
 > Time: O(r * c) where `r` is the number of rows and `c` is the number of columns.
 >
 > Space: O(1)
 >
 > </details>
+
+### TEST
+
+<details> <summary>Show code</summary>
+
+Time: O(r * c) where `r` is the number of rows and `c` is the number of columns.
+
+```
+python
+matrix = [
+    [10, 20],
+    [30, 40]
+]
+
+row_index = 0
+col_index = 0
+
+for row in matrix:
+    print("row:", row_index)
+    for value in row:
+        print("col:", col_index, "value:", value)
+        col_index += 1
+    col_index = 0
+    row_index += 1
+```
+
+</details> 
 
 #### 8. Call Stelios 🥊
 
@@ -244,15 +284,17 @@ Call Stelios to challenge you with a question before moving to the exercise.
 Add your answers to:
 
 ```txt
-session1/session_solutions/session-01-part-02.py
+session1/solutions/
 ```
 
 Tasks:
 
-1. Write a function to count elements between `1` and `10` (inclusive) in `data = [30, 6, 9, 12, 15, 8]`.
-2. Write a function to sum all even numbers in the same list.
-3. Write a function that returns the position of the first value equal to `12` in the same list. If the value is not found, return `-1`.
-4. For the matrix below, print the position of `25` as user-friendly coordinates `[2, 2]` (use 1-based indexing for rows and columns).
+1. In `count_items.py`, write a function to count elements between `1` and `10` (inclusive) in `data = [30, 6, 9, 12, 15, 8]`.
+2. In `sum_items.py`, write a function to sum all even numbers in the same list.
+3. In `find_position.py`, write a function that returns the position of the first value equal to `12` in the same list. If the value is not found, return `-1`.
+4. In `matrix_positions.py`, for the matrix below, print the position of `25` as user-friendly coordinates `[2, 2]` (use 1-based indexing for rows and columns).
+
+File: `session1/solutions/matrix_positions.py`
 
 ```python
 matrix = [

@@ -5,11 +5,11 @@
 What is the purpose of a counter in Python loops?
 
 - To store text values
-- To track how many times something happens
 - To stop a loop
 - To store a list
+- To track how many times something happens
 
-Answer: 2
+Answer: 4
 Type: single
 Time: 45
 Explanation: A counter increases or decreases to track quantity.
@@ -32,12 +32,12 @@ Explanation: Index refers to the position of an element in a list, starting at 0
 
 Which loop is used to iterate over elements in a list?
 
+- for loop
 - while loop only
 - if statement
-- for loop
 - function
 
-Answer: 3
+Answer: 1
 Type: single
 Time: 45
 Explanation: A for loop is commonly used to iterate through list elements.
@@ -47,11 +47,11 @@ Explanation: A for loop is commonly used to iterate through list elements.
 What does break do inside a loop?
 
 - Skips one iteration
-- Restarts the loop
 - Stops the loop immediately
+- Restarts the loop
 - Prints a value
 
-Answer: 3
+Answer: 2
 Type: single
 Time: 30
 Explanation: break exits the loop immediately when triggered.
@@ -61,11 +61,11 @@ Explanation: break exits the loop immediately when triggered.
 What does range(len(data)) allow you to do?
 
 - Modify the list
-- Iterate over indexes of a list
 - Delete elements
 - Sort the list
+- Iterate over indexes of a list
 
-Answer: 2
+Answer: 4
 Type: single
 Time: 45
 Explanation: It lets you loop over indexes instead of values.
@@ -75,11 +75,11 @@ Explanation: It lets you loop over indexes instead of values.
 What is a nested loop?
 
 - A loop that runs once
-- A loop inside another loop
 - A loop with a condition
+- A loop inside another loop
 - A loop that uses break
 
-Answer: 2
+Answer: 3
 Type: single
 Time: 35
 Explanation: A nested loop is a loop inside another loop.

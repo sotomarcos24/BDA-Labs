@@ -79,6 +79,8 @@ Expected result: `studio_ghibli_movies.csv` appears in your current folder.
 
 Using `csv.reader` (index-based):
 
+File: `session2/session_solutions/session-02-part-02.py`
+
 ```python
 import csv
 
@@ -91,6 +93,8 @@ with open("studio_ghibli_movies.csv", "r") as file:
 ```
 
 Using `csv.DictReader` (name-based):
+
+File: `session2/session_solutions/session-02-part-02.py`
 
 ```python
 import csv
@@ -106,6 +110,8 @@ with open("studio_ghibli_movies.csv", "r") as file:
 
 Start with a simple in-memory list:
 
+File: `session2/session_solutions/session-02-part-02.py`
+
 ```python
 students = [
     {"name": "Ana", "score": "85", "email": "ana@mail.com"},
@@ -115,6 +121,8 @@ students = [
 ```
 
 Save raw data:
+
+File: `session2/session_solutions/session-02-part-02.py`
 
 ```python
 import csv
@@ -126,6 +134,8 @@ with open("students_raw.csv", "w", newline="") as file:
 ```
 
 Reopen, fix missing `email`, and save again:
+
+File: `session2/session_solutions/session-02-part-02.py`
 
 ```python
 import csv

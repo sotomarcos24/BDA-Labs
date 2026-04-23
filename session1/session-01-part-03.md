@@ -91,6 +91,8 @@ Expected result: `movies.csv` appears in your current folder.
 
 Let's load the file in the computer memory. This prints each CSV row as a Python list.
 
+File: `session1/session_solutions/session-01-part-03.py`
+
 ```python
 import csv
 
@@ -126,6 +128,8 @@ Example output shape:
 
 Check what `reader` is:
 
+File: `session1/session_solutions/session-01-part-03.py`
+
 ```python
 import csv
 
@@ -141,6 +145,8 @@ Example output:
 ```
 
 Print the `genres` column (index `4`):
+
+File: `session1/session_solutions/session-01-part-03.py`
 
 ```python
 import csv
@@ -211,4 +217,3 @@ mkdir tmp_incomplete
 hf download Birkbeck/movies_incomplete movies.csv --repo-type dataset --local-dir tmp_incomplete
 Copy-Item .\tmp_incomplete\movies.csv .\movies_incomplete.csv
 ```
-

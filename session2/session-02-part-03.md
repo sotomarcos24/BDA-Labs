@@ -49,6 +49,8 @@ session2/session_solutions/session-02-part-03.py
 
 Binary search works on **sorted** data.
 
+File: `session2/session_solutions/session-02-part-03.py`
+
 ```python
 def binary_search(data, target):
     left = 0
@@ -95,6 +97,8 @@ print(binary_search(nums, 23))  # 5
 > </details>
 
 #### 5. Example 2: Merge sort shape (`O(n log n)`)
+
+File: `session2/session_solutions/session-02-part-03.py`
 
 ```python
 def merge(left, right):
@@ -148,6 +152,8 @@ print(merge_sort([7, 2, 9, 1, 5, 3]))
 
 #### 6. Example 3: Nested loop count (`O(n^2)`)
 
+File: `session2/session_solutions/session-02-part-03.py`
+
 ```python
 def count_pairs(data):
     count = 0
@@ -175,6 +181,8 @@ print(count_pairs([10, 20, 30, 40]))
 
 #### 7. Example 4: Fibonacci recursion (`O(2^n)`)
 
+File: `session2/session_solutions/session-02-part-03.py`
+
 ```python
 def fib(n):
     if n <= 1:
@@ -197,6 +205,8 @@ print(fib(6))
 > </details>
 
 #### 8. Example 5: Permutation count (`O(n!)`)
+
+File: `session2/session_solutions/session-02-part-03.py`
 
 ```python
 def permute_count(data):

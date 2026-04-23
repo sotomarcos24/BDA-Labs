@@ -149,6 +149,8 @@ For now, minimise the current VS Code window. On your Desktop (or any folder you
 3. Create a `requirements.txt` file, add the `requests` library (`2.32.3`), and install it.
 4. Create a file named `solution_part1.py` and run the script below.
 
+File: `test-folder/solution_part1.py`
+
 ```python
 import re
 from urllib.request import urlopen
