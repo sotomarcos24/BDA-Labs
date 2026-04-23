@@ -16,21 +16,7 @@ First, you will practice core Python loop logic using:
 Before starting:
 
 1. Open the `session1` folder in Visual Studio Code.
-2. Activate your virtual environment:
-
-```bash
-source .venv/bin/activate
-```
-
-On Windows (VS Code terminal):
-
-- PowerShell: `.venv\Scripts\Activate.ps1` (may be blocked by execution policy on some machines)
-- Command Prompt: `.venv\Scripts\activate.bat`
-- If activation is blocked, run scripts directly with: `.venv\Scripts\python.exe your_script.py`
-- Optional temporary PowerShell bypass (current session only):
-  `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
-  Then run: `.venv\Scripts\Activate.ps1`
-
+2. Activate your virtual environment.
 3. Create (or open) your solution file:
 
 ```txt
