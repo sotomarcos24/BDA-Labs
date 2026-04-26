@@ -65,7 +65,9 @@ Expected result: `movies.csv` appears in your current folder.
 
 #### 5. First CSV read example
 
-Let's load the file in the computer memory. This prints each CSV row as a Python list.
+Let's read the file row by row. This prints each CSV row as a Python list.
+
+Run this script from the `session1` folder (where `movies.csv` was downloaded). If you run from the `bda` root, use `open("session1/movies.csv", "r")`.
 
 File: `session1/solutions/exercise-01-03.py`
 
@@ -159,7 +161,7 @@ Tasks:
 
 1. Print the first row only (header).
 2. Print the first 5 rows only.
-3. Find and print the first movie where `genres == 'Action'`, then stop.
+3. Find and print the first movie where `genres` contains `Action`, then stop.
 4. Note one benefit and one limitation of using raw `csv.reader`.
 5. What are the time and space complexities of your script(s)?
 

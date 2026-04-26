@@ -54,7 +54,7 @@ This part of the class is a recap of the basics. We will reuse these steps in fu
 - `README.md`: a simple project file where you document what you built, what worked, and what is pending (useful for tracking progress). Not sure about Markdown syntax? [Check here](https://www.markdownguide.org/basic-syntax/).
 - `solutions/`: the folder you need to create to store your answers for each tutorial part (no need to submit now, but you can share it with Stelios later, for example for homework).
 - `session_solutions/`: reference solutions provided by Stelios. Use them only to review your work after you attempt the tasks.
-- Naming convention for your files in `solutions/`: use `exercise-<session>-<part>.py` (for example, `exercise-01-02.py`).
+- Naming convention for exercise files in `solutions/`: use `exercise-<session>-<part>.py` (for example, `exercise-01-02.py`). Helper library modules can use underscores (for example, `exercise_01_02_lib.py`).
 
 You will need to navigate folders in the terminal using `cd`.
 
@@ -86,10 +86,20 @@ You will need a virtual environment to install the required packages.
 >
 > Navigate to the folder using `cd session1`.
 
-Create a virtual environment (Mac or Windows):
+Create a virtual environment:
+
+On macOS/Linux:
+
+```bash
+python3 -m venv .venv
+```
+
+On Windows:
 
 ```powershell
 python -m venv .venv
+# or
+py -m venv .venv
 ```
 
 Activate the environment:
@@ -115,15 +125,15 @@ deactivate
 Now check the `requirements.txt` file. It contains the dependencies we need:
 
 ```txt
-huggingface_hub==0.23.4
-datasets==2.20.0
+huggingface_hub
+datasets
 requests==2.32.3
 quizmd
 ```
 
 > [!TIP]
 >
-> A **`requirements.txt`** file lists all Python packages a project needs. It helps everyone recreate the same environment. It’s better to specify exact versions.
+> A **`requirements.txt`** file lists all Python packages a project needs. It helps everyone recreate the same environment. Pin exact versions when reproducibility is critical.
 
 #### 6. Install dependencies
 

@@ -35,7 +35,15 @@ On Windows (VS Code terminal):
   `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`
   Then run: `.venv\Scripts\Activate.ps1`
 
-3. Create (or open) your exercise file:
+3. Install dependencies before using `hf`:
+
+```bash
+pip install -r requirements.txt
+```
+
+If you are reusing your Session 1 virtual environment, make sure you already installed `session1/requirements.txt` (it includes `huggingface_hub`, which provides the `hf` command).
+
+4. Create (or open) your exercise file:
 
 ```txt
 session2/solutions/exercise-02-01.py
@@ -66,6 +74,8 @@ hf download Birkbeck/movies movies.csv --repo-type dataset --local-dir .
 ```
 
 Expected result: `movies.csv` appears in your current folder.
+
+Run the scripts from the `session2` folder. If you run from the `bda` root, use `open("session2/movies.csv", "r")`.
 
 #### 4.1. Safe download for `movies_incomplete.csv`
 

@@ -36,9 +36,9 @@ $env:GEMINI_API_KEY="PASTE_YOUR_KEY"
 
 #### 3. Limits note
 
-Google AI Studio is free, but it has strict usage limits.
+Google AI Studio is free, but it has usage limits.
 
-> Gemini 2.0 Flash (the one we will use) on the free tier allows roughly **10–15 requests per minute** and around **200 requests per day**. It supports a large context window, with up to about 1M tokens per minute, making it suitable for experimentation. If you **exceed these limits**, you will receive rate **limit (429) errors**, and usage resets daily. These limits can vary and may change over time.
+> Limits depend on model and tier, and can change over time. Check the latest limits before running: https://ai.google.dev/gemini-api/docs/quota. If you exceed limits, you may receive `429` errors until quota resets.
 
 #### 4. Download dataset
 
@@ -60,6 +60,8 @@ session2/solutions/exercise-02-homework.py
 
 Minimal example:
 
+Use a current supported model (for example `gemini-2.5-flash`) or the latest model listed in the docs: https://ai.google.dev/gemini-api/docs/models
+
 File: `session2/solutions/exercise-02-homework.py`
 
 ```python
@@ -71,9 +73,10 @@ api_key = os.getenv("GEMINI_API_KEY")
 if not api_key:
     raise RuntimeError("GEMINI_API_KEY is not set")
 
+model_name = "gemini-2.5-flash"
 url = (
     "https://generativelanguage.googleapis.com/v1beta/models/"
-    "gemini-2.0-flash:generateContent?key=" + api_key
+    f"{model_name}:generateContent"
 )
 
 payload = {
@@ -89,7 +92,10 @@ payload = {
 request = Request(
     url,
     data=json.dumps(payload).encode("utf-8"),
-    headers={"Content-Type": "application/json"},
+    headers={
+        "Content-Type": "application/json",
+        "x-goog-api-key": api_key,
+    },
     method="POST",
 )
 

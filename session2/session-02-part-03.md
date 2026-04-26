@@ -205,7 +205,7 @@ print(fib(6))
 >
 > </details>
 
-#### 8. Example 5: Permutation count (`O(n!)`)
+#### 8. Example 5: Permutation count (`O(n!)` concept, `O(n * n!)` in this implementation)
 
 File: `session2/solutions/exercise-02-03.py`
 
@@ -232,7 +232,8 @@ print(permute_count([1, 2, 3, 4]))  # 24
 >   <summary>Show answer</summary>
 >
 > It explores every possible ordering (permutation), and there are `n!`
-> permutations.
+> permutations. In this exact code, repeated list slicing adds extra linear
+> work, so a tighter bound is closer to `O(n * n!)`.
 >
 > </details>
 

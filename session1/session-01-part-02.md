@@ -124,7 +124,7 @@ Expected output:
 > <details>
 > <summary>Show answer</summary>
 >
-> `i += 1` increments by 1, while `total += element` accumulates values.
+> `count += 1` increments a counter, while `total += item` accumulates values.
 >
 > ```python
 > data = [10, 20, 30, 40, 50]

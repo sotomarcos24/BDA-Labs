@@ -68,6 +68,8 @@ hf download Birkbeck/studio_ghibli_movies studio_ghibli_movies.csv --repo-type d
 
 Expected result: `studio_ghibli_movies.csv` appears in your current folder.
 
+Run the scripts from the `session2` folder. If you run from the `bda` root, use `open("session2/studio_ghibli_movies.csv", "r")`.
+
 #### 4. Basics you should know
 
 - `csv.reader(file)`: each row is a list, so columns are accessed by index.
@@ -120,6 +122,8 @@ students = [
     {"name": "Cara", "score": "91", "email": ""},
 ]
 ```
+
+Keep these snippets in the same file and run top-to-bottom. The next blocks depend on `students` being defined first.
 
 Save raw data:
 
@@ -184,6 +188,7 @@ Tasks:
 8. Report time and space complexity of your cleaning script.
 
 Note: the research step is intentional. The missing years/composer are not fully inferable from the CSV alone, so you are expected to use an external source (for example Wikipedia or an official filmography source).
+Quick validation checklist: add a source URL next to each filled value, mark confidence (high/medium/low), and confirm at least one second source before saving your final cleaned file.
 
 #### 9. Quiz
 
