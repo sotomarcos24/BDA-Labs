@@ -1,14 +1,9 @@
-import csv
-from io import StringIO
+import re
+from urllib.request import urlopen
 
-import requests
+url = "https://www.google.com"
+with urlopen(url) as response:
+    html = response.read().decode("utf-8", errors="ignore")
 
-url = "https://huggingface.co/datasets/Birkbeck/movies/resolve/main/movies.csv"
-response = requests.get(url, timeout=30)
-response.raise_for_status()
-
-reader = csv.reader(StringIO(response.text))
-for i, row in enumerate(reader):
-    if i == 5:
-        break
-    print(row)
+match = re.search(r"<title>(.*?)</title>", html, re.IGNORECASE | re.DOTALL)
+print(match.group(1).strip() if match else "No title found")

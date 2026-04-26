@@ -77,6 +77,7 @@ def clean_ghibli_dataset(input_path, output_path):
         reader = csv.DictReader(in_file)
         fieldnames = reader.fieldnames
         cleaned_rows = []
+        missing_year_rows = []
 
         first_missing = None
         for row_number, row in enumerate(reader, start=2):
@@ -86,6 +87,7 @@ def clean_ghibli_dataset(input_path, output_path):
 
             title = row.get("title", "")
             if row.get("year", "") == "":
+                missing_year_rows.append({"row": row_number, "title": title})
                 if title == "Kiki's Delivery Service":
                     row["year"] = "1989"
                 elif title == "Ponyo":
@@ -106,6 +108,9 @@ def clean_ghibli_dataset(input_path, output_path):
         print(f"First missing cell: row {first_missing[0]}, column '{first_missing[1]}'")
     else:
         print("No missing cells found.")
+    print("Rows where year was missing:")
+    for item in missing_year_rows:
+        print(f"- row {item['row']}: {item['title']}")
     print(f"Saved cleaned file: {output_path}")
 
 

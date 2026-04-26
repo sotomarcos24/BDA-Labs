@@ -9,6 +9,7 @@ Use these files only to check your approach after you complete each task.
 
 - `session-02-part-01.py`: Part 1 (DictReader intro) solution
 - `session-02-part-02.py`: Part 2 (DictReader dataset practice) solution
+- `session-02-part-03.py`: Part 3 (complexity patterns) solution
 - `session-02-bonus.py`: Bonus LLM API + O(n)/O(n^2) solution
 - `bonus_lib.py`: helper library for the bonus (custom character counting)
 

@@ -96,13 +96,13 @@ with open(FILE_PATH, "r") as file:
             break
         print(row)
 
-# Task 3: Find first Action movie and stop
+# Task 3: Find first movie where genres contains Action and stop
 with open(FILE_PATH, "r") as file:
     reader = csv.reader(file)
     next(reader)  # skip header
     print("\nTask 3 - First Action movie:")
     for row in reader:
-        if row[4] == "Action":
+        if "Action" in row[4]:
             print(row)
             break
 
