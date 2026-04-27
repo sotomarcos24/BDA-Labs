@@ -208,7 +208,7 @@ What is the time complexity when checking if a CSV file is empty?
 Answer: 1
 Type: single
 Time: 45
-Explanation: Only the first read attempt is needed to determine if the file has any rows.
+Explanation: Only the first read attempt is needed to determine if the file has any rows 😄.
 
 ## Question 16
 
