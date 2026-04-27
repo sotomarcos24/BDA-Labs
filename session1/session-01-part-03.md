@@ -74,13 +74,18 @@ File: `session1/solutions/exercise-01-03.py`
 ```python
 import csv
 
-with open("movies.csv", "r") as file:
+with open("movies.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     for row in reader:
         print(row)
 ```
 
-Example output shape:
+Run the script using:
+```
+python solutions/exercise-01-03.py
+```
+
+Example output:
 
 ```txt
 ['movie_id', 'title', 'year', ...]
@@ -90,7 +95,7 @@ Example output shape:
 
 > [!TIP]
 >
-> What are the time and space complexities of the above script?
+> What are the time and space complexities of this operation?
 >
 > <details>
 >   <summary>Show answer</summary>
@@ -135,6 +140,8 @@ with open("movies.csv", "r") as file:
         print(row[4])
 ```
 
+This script assumes all rows have at least 5 columns. To avoid errors, add a check such as if len(row) > 4: before accessing the column.
+
 > [!TIP]
 >
 > What are the time and space complexities of the above script?
@@ -159,10 +166,10 @@ session1/solutions/exercise-01-03.py
 
 Tasks:
 
-1. Print the first row only (header).
+1. Print only the first row (header).
 2. Print the first 5 rows only.
 3. Find and print the first movie where `genres` contains `Action`, then stop.
-4. Note one benefit and one limitation of using raw `csv.reader`.
+4. State one benefit and one limitation of using raw `csv.reader`.
 5. What are the time and space complexities of your script(s)?
 
 #### 8. Exercise 2
@@ -175,11 +182,27 @@ session1/solutions/exercise-01-03.py
 
 Use the [dataset here](https://huggingface.co/datasets/Birkbeck/movies_incomplete). You will need to download the data using the appropriate `hf` command. 
 
-There is a small issue with a missing record, can you find it? Where is it (row/column).
+There is a data issue (e.g. missing or malformed row). 
+Identify:
+- which row is problematic
+- which column is affected
+- what the issue is
 
-> [!IMPORTANT]
+This dataset can also expose a file named `movies.csv`. If you download it into the same folder, you can overwrite your original `movies.csv`.
+
+> [!NOTE]
 >
-> This dataset can also expose a file named `movies.csv`. If you download it into the same folder, you can overwrite your original `movies.csv`.
+> Use `enumerate(reader)` to track row numbers and detect malformed rows.
+>
+> <details>
+>   <summary>Show code</summary>
+> 
+> ```
+> for i, row in enumerate(reader):
+>    if len(row) != expected_columns:
+>        print(f"Issue at row {i}: {row}")
+> ```
+> </details>
 
 Safe download flow:
 
