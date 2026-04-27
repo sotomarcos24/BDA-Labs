@@ -105,7 +105,7 @@ What is the space complexity when loading the entire CSV file into a list?
 - O(1)
 - O(log n)
 - O(n)
-- - O(n²)
+- O(n²)
   
 Answer: 3
 Type: single
