@@ -4,7 +4,7 @@
 
 #### 1. Goal
 
-First, you will practice core Python loop logic using:
+In this tutorial, you will practice core Python loop logic using:
 
 - counters
 - indexes
@@ -103,7 +103,8 @@ Expected output:
 
 #### 5. Example 2: Sum elements
 
-Let's sum all elements using a `total` variable.  File: `session1/solutions/exercise-01-02.py`, Fill up the missing code.
+Let's sum all elements using a `total` variable.  
+File: `session1/solutions/exercise-01-02.py`. Fill in the missing code.
 
 ```python
 data = [10, 20, 30, 40, 50]
@@ -162,11 +163,12 @@ File: `session1/solutions/exercise-01-02.py`. Fill up the missing code.
 ```python
 data = [10, 20, 30, 40, 50]
 
+# We use `pointer` as an index counter (starting at 0).
 pointer = 0
 ...
 ```
 
-Expected output:
+Expected output (0-based index, counting starts from 0):
 
 ```txt
 2
@@ -239,6 +241,7 @@ for row in matrix:
     for value in row:
         print("col:", col_index, "value:", value)
         col_index += 1
+    # Reset col_index for each new row.
     col_index = 0
     row_index += 1
 ```
@@ -277,9 +280,9 @@ col: 1 value: 40
 >
 > </details>
 
-#### 8. Call Stelios 🥊
+#### 8. Call Stelios for a quick challenge 🔥
 
-Call Stelios to challenge you with a question before moving to the exercise.
+Call Stelios for a quick challenge question before moving to the exercise.
 
 #### 9. Exercise
 
@@ -294,8 +297,8 @@ Tasks:
 1. Write a function to count elements between `1` and `10` (inclusive) in `data = [30, 6, 9, 12, 15, 8]`.
 2. Write a function to sum all even numbers in the same list.
 3. Write a function that returns the position of the first value equal to `12` in the same list. If the value is not found, return `-1`.
-4. For the matrix below, print the position of `25` as user-friendly coordinates `[2, 2]` (use 1-based indexing for rows and columns).
-
+4. For the matrix below, print the position of `25` as coordinates [2, 2] in the matrix (row, column), using 1-based indexing.
+   
 File: `session1/solutions/exercise-01-02.py`
 
 ```python
@@ -312,7 +315,7 @@ matrix = [
 
 Complete the following quiz.
 
-```shell
+```bash
 quizmd quizzes/python-loops-and-indexing-quiz.md
 ```
 
@@ -322,8 +325,3 @@ If you want to choose a theme:
 quizmd --theme light quizzes/python-loops-and-indexing-quiz.md
 quizmd --theme dark quizzes/python-loops-and-indexing-quiz.md
 ```
-
-- Use `--theme light` if your terminal has a white/light background.
-- Use `--theme dark` if your terminal has a dark background.
-
-> For accessibility use this: `quizmd --no-color quizzes/python-loops-and-indexing-quiz.md`
