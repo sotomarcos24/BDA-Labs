@@ -40,7 +40,7 @@ What does `arr.append([4,5])` do?
 - Extends the list with `[4,5]`
 
 Answer: 1
-Imposters: 2,4
+Imposters: 4
 Type: single
 Time: 30
 Explanation: `append` adds one element, even if that element is a list. Using `extend` would add elements separately.
