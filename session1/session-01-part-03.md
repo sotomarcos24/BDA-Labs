@@ -116,7 +116,7 @@ File: `session1/solutions/exercise-01-03.py`
 ```python
 import csv
 
-with open("movies.csv", "r") as file:
+with open("movies.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     print(reader)
 ```
@@ -134,13 +134,13 @@ File: `session1/solutions/exercise-01-03.py`
 ```python
 import csv
 
-with open("movies.csv", "r") as file:
+with open("movies.csv", "r", newline="", encoding="utf-8") as file:
     reader = csv.reader(file)
     for row in reader:
         print(row[4])
 ```
 
-This script assumes all rows have at least 5 columns. To avoid errors, add a check such as if len(row) > 4: before accessing the column.
+This script assumes all rows have at least 5 columns. To avoid errors, add a check such as `if len(row) > 4:` before accessing the column.
 
 > [!TIP]
 >
@@ -188,7 +188,7 @@ Identify:
 - which column is affected
 - what the issue is
 
-This dataset can also expose a file named `movies.csv`. If you download it into the same folder, you can overwrite your original `movies.csv`.
+This dataset may also contain a file named `movies.csv`. If you download it into the same folder, you can overwrite your original `movies.csv`.
 
 > [!NOTE]
 >
@@ -197,11 +197,12 @@ This dataset can also expose a file named `movies.csv`. If you download it into 
 > <details>
 >   <summary>Show code</summary>
 > 
-> ```
+> ```python
 > for i, row in enumerate(reader):
->    if len(row) != expected_columns:
->        print(f"Issue at row {i}: {row}")
+>     if len(row) != expected_columns:
+>         print(f"Issue at row {i}: {row}")
 > ```
+> Set `expected_columns` based on the header length.
 > </details>
 
 Safe download flow:
