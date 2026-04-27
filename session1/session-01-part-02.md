@@ -325,3 +325,5 @@ If you want to choose a theme:
 quizmd --theme light quizzes/python-loops-and-indexing-quiz.md
 quizmd --theme dark quizzes/python-loops-and-indexing-quiz.md
 ```
+
+You are now ready to move to the next tutorial.
