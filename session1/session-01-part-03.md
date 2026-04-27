@@ -1,4 +1,4 @@
-### Session 1 | part 3
+### Session 1 | Part 3
 
 > In this part, we move from setup to real dataset processing with pure Python.
 
