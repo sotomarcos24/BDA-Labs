@@ -205,25 +205,32 @@ This dataset may also contain a file named `movies.csv`. If you download it into
 > Set `expected_columns` based on the header length.
 > </details>
 
-Safe download flow:
+#### 9. Quizzes
 
-1. Download incomplete data into a temporary folder:
-
-```bash
-mkdir -p tmp_incomplete
-hf download Birkbeck/movies_incomplete movies.csv --repo-type dataset --local-dir tmp_incomplete
-```
-
-2. Copy/rename it into your working folder:
+Complete the following quiz.
 
 ```bash
-cp tmp_incomplete/movies.csv movies_incomplete.csv
+quizmd quizzes/python-loops-and-indexing-quiz.md
 ```
 
-On Windows PowerShell:
+Now complete the imposter quiz:
 
-```powershell
-mkdir tmp_incomplete
-hf download Birkbeck/movies_incomplete movies.csv --repo-type dataset --local-dir tmp_incomplete
-Copy-Item .\tmp_incomplete\movies.csv .\movies_incomplete.csv
+> [!NOTE]
+> 
+> The next quiz is an imposter quiz 🤥.
+> 
+> You need to identify:
+> - the correct answer and
+> - the answer that *looks correct but is actually wrong*.
+> Read the quiz instructions before you start.
+>
+> Example:
+>
+> What is the index of `20` in `[10, 20, 30]`?
+>
+> Correct answer: `1`
+> Imposter answer: `2` (common mistake due to misunderstanding 0-based indexing)
+
+```bash
+quizmd quizzes/python-session-01-imposter-quiz.md
 ```
