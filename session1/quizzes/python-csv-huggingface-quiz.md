@@ -100,21 +100,21 @@ Explanation: `csv.reader` uses indexes, which makes code less readable compared 
 
 ## Question 8
 
-Which of the following are valid tasks in this session?
+What is the space complexity when loading the entire CSV file into a list?
 
-- Print the first row
-- Print the first 5 rows
-- Find the first movie with genre "Action"
-- Train a machine learning model
-
-Answer: 1,2,3
-Type: multiple
+- O(1)
+- O(log n)
+- O(n)
+- - O(n²)
+  
+Answer: 3
+Type: single
 Time: 45
-Explanation: The session focuses on CSV reading, searching, and basic processing tasks.
+Explanation: All rows are stored in memory, so space grows linearly with input size.
 
 ## Question 9
 
-What is the space complexity of reading and printing rows one by one?
+What is the space complexity when reading sequentially without storing rows?
 
 - O(1)
 - O(log n)
@@ -127,6 +127,90 @@ Time: 45
 Explanation: Rows are processed one at a time without storing them, so space is O(1).
 
 ## Question 10
+
+What is the space complexity when counting rows without storing them?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 1
+Type: single
+Time: 45
+Explanation: Only a counter variable is used, no extra storage is required.
+
+## Question 11
+
+What is the time complexity when filtering rows based on a condition (e.g. age > 30)?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 3
+Type: single
+Time: 45
+Explanation: Every row must be checked against the condition.
+
+## Question 12
+
+What is the time complexity when removing duplicate rows using a nested loop approach?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 4
+Type: single
+Time: 45
+Explanation: Each row is compared with every other row to detect duplicates.
+
+## Question 13
+
+What is the space complexity when storing all pairwise combinations of rows from a CSV file?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 4
+Type: single
+Time: 45
+Explanation: All pairs of rows are stored, leading to n² combinations.
+
+## Question 14
+
+What is the time complexity of reading only the first row of a CSV file?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 1
+Type: single
+Time: 45
+Explanation: Only one row is read, so the operation takes constant time.
+
+## Question 15
+
+What is the time complexity when checking if a CSV file is empty?
+
+- O(1)
+- O(log n)
+- O(n)
+- O(n²)
+
+Answer: 1
+Type: single
+Time: 45
+Explanation: Only the first read attempt is needed to determine if the file has any rows.
+
+## Question 16
 
 What is the purpose of the `hf download` command?
 
