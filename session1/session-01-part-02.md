@@ -1,4 +1,4 @@
-### Session 1 | part 2
+### Session 1 | Part 2
 
 > In BDA, we will gradually build our own small libraries. First, let's recap the basics.
 
