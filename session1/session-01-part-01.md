@@ -1,10 +1,10 @@
-### Session 1 | part 1
+### Session 1 | Part 1
 
 > Programming is about solving problems, not just writing code. Labs are not a race; they are a marathon, so take your time. Do not copy and run blindly. Think first, and if you get stuck, ask Stelios.
 
 #### 1. Goal
 
-In this first tutorial, we will prepare your workspace. Pay attention, as you will need to follow these steps in future classes.
+In this first tutorial, you will prepare your workspace. Pay attention, as you will need to follow these steps in future classes.
 
 #### 2. Workspace setup
 
@@ -16,6 +16,10 @@ In this first tutorial, we will prepare your workspace. Pay attention, as you wi
 ```bash
 git clone https://github.com/warestack/bda
 ```
+
+> [!TIP]
+>
+> If the repository already exists, run `git pull` instead of cloning again.
 
 5. Open the project folder in VS Code.
 6. Open a terminal inside VS Code.
@@ -39,7 +43,7 @@ py --version
 
 Depending on your Python installation on Windows, one of the above commands may work while others may not.
 
-This part of the class is a recap of the basics. We will reuse these steps in future sessions.
+This part is a recap of the basics. We will reuse these steps in future sessions.
 
 #### 4. Basics you should know
 
@@ -82,7 +86,7 @@ You will need a virtual environment to install the required packages.
 
 > [!TIP]
 >
-> Make sure you are in the correct folder before creating it. You can create one environment per session (recommended), or use one environment for the entire `bda` project. 
+> Make sure you are in the correct folder before creating it. You can create one environment per session (recommended) or use one environment for the entire `bda` project.
 >
 > Navigate to the folder using `cd session1`.
 
@@ -150,7 +154,8 @@ python3 -m ensurepip --upgrade
 python3 -m pip install --upgrade pip
 ```
 
-Check the output to ensure everything installed successfully. Don't worry about warnings. You are now ready to proceed. You can use the `clear` command to clear the terminal. Try it out.
+Check the output to ensure everything installed successfully. You can ignore most warnings for the moment.
+You are now ready to proceed. You can use the `clear` command to clear the terminal. Try it out.
 
 #### 7. Exercise 1
 
@@ -191,27 +196,27 @@ This exercise is more about learning how to manage your `.venv`. When finished, 
 pip install quizmd
 ```
 
->  Run the quiz in your terminal and ask Stelios for help if you’re unsure. Solutions are in the `quizzes` folder but don't see them yet.
+>  Run the quiz in your terminal and ask Stelios for help if you’re unsure. Solutions are in the `quizzes` folder, but don't see them yet.
 >
 
 Start the quiz by selecting a theme that matches your terminal:
 
-Use the default theme (no --theme needed)
-```
+Use the default theme (no --theme needed):
+```bash
 quizmd quizzes/python-workspace-setup-quiz.md
 ```
-Or choose a theme
+Or choose a theme:
 
 Use `--theme light` if your terminal has a light background or `--theme dark` if your terminal has a dark background.
 
-```
+```bash
 quizmd --theme light quizzes/python-workspace-setup-quiz.md
 quizmd --theme dark quizzes/python-workspace-setup-quiz.md
 ```
 
 For a focus-mode, try:
 
-```
+```bash
 quizmd --full-screen --theme dark quizzes/python-workspace-setup-quiz.md
 ```
 
@@ -223,4 +228,4 @@ For accessibility use this: `quizmd --no-color quizzes/python-workspace-setup-qu
 >
 > Use the `space bar` to select an option, then `press Enter` to move to the next question. Go ahead and complete the quiz 🎉!
 
-Move to the next tutorial.
+You are now ready to move to the next tutorial.
