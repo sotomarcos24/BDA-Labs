@@ -1,143 +1,80 @@
 import csv
-import shutil
-import subprocess
-import tempfile
-from pathlib import Path
 
-MOVIES_PATH = Path("movies.csv")
-INCOMPLETE_PATH = Path("data/movies_incomplete/movies.csv")
+# with open("movies.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         print(row)
 
+# with open("movies.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         print(row["genres"])
 
-def download_dataset(repo_id, filename, target_path):
-    if target_path.exists():
-        return True
+#count = 0
 
-    target_path.parent.mkdir(parents=True, exist_ok=True)
+# with open("movies.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         if row["year"] == "2020":
+#             count += 1
 
-    try:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            subprocess.run(
-                [
-                    "hf",
-                    "download",
-                    repo_id,
-                    filename,
-                    "--repo-type",
-                    "dataset",
-                    "--local-dir",
-                    temp_dir,
-                ],
-                check=True,
-                stdout=subprocess.DEVNULL,
-                stderr=subprocess.DEVNULL,
-            )
-            source_path = Path(temp_dir) / filename
-            if not source_path.exists():
-                return False
-            shutil.copyfile(source_path, target_path)
-    except Exception:
-        return False
+# print(count)
 
-    return target_path.exists()
+# with open("movies.csv", "r") as file:
+#     reader = csv.DictReader(file)
+#     for row in reader:
+#         if "Action" in row["genres"]:
+#             print(row)
+#             break
 
+with open("movies.csv", "r") as file:
+    reader = csv.DictReader(file)
+    
+    # Print the fieldnames
+    print(f"Feild names: {reader.fieldnames}")
+    
+    # Print the first 5 rows
+    print("First 5 data rows:")
+    for i, row in enumerate(reader):
+        print(row)
+        if i == 4:
+            break
+   
+    # Number of movies that are form USA
+    count1 = 0
+    for row in reader:
+        if row["country"] == "USA":
+            count1 += 1
+    print(f"Number of movies from USA: {count1}")
+   
+    # First Action movie
+    for row in reader:
+        if row["genres"] == "Action":
+            print(f"First Action movie is: {row}")
+            break
+    # Its easier to acces the column values
+    # Time complexity: O(n)
+    # Space complexity: O(1)
 
-def safe_float(value):
-    try:
-        return float(value)
-    except (TypeError, ValueError):
-        return None
+# Find the missing data
+with open("movies_incomplete.csv", "r") as file:
+    incomplete_reader = csv.DictReader(file)
+    for i, row in enumerate(incomplete_reader):
+        for key, value in row.items():
+            if value == "":
+                print(f"There is a missing value in the row {i} and column {key}")
 
-
-def print_main_dataset_answers(path):
-    with path.open("r", encoding="utf-8", newline="") as file:
-        reader = csv.DictReader(file)
-        print("Field names:")
-        print(reader.fieldnames)
-
-        print("\nFirst 5 data rows:")
-        usa_count = 0
-        first_exact_action = None
-        first_contains_action = None
-
-        for row_number, row in enumerate(reader, start=1):
-            if row_number <= 5:
-                print(row)
-
-            if row["country"] == "USA":
-                usa_count += 1
-
-            if first_exact_action is None and row["genres"] == "Action":
-                first_exact_action = row
-
-            if first_contains_action is None and "Action" in row["genres"]:
-                first_contains_action = row
-
-    print("\nMovies from USA:", usa_count)
-    print("\nFirst movie where genres is exactly Action:")
-    print(first_exact_action if first_exact_action else "No exact Action match found.")
-    print("\nFirst movie where Action appears inside genres:")
-    print(first_contains_action if first_contains_action else "No Action match found.")
-
-    # DictReader lets us use column names, which is clearer than numeric indexes.
-    print("\nComplexity:")
-    print("Field names: time O(1), space O(c)")
-    print("First 5 rows: time O(1), space O(1)")
-    print("USA count: time O(n), space O(1)")
-    print("First-match searches: time O(n), space O(1)")
+# The average of votes
+with open("movies_incomplete.csv", "r") as file:
+    incomplete_reader = csv.DictReader(file)
+    row_count = 0
+    votes_sum = 0
+    for row in incomplete_reader:
+        try:
+            votes_sum += float(row["votes"])
+            row_count += 1
+        except:
+            continue
+    print(f"The average of votes is: {votes_sum/row_count}")
 
 
-def print_incomplete_dataset_answers(path):
-    with path.open("r", encoding="utf-8", newline="") as file:
-        reader = csv.DictReader(file)
-        fieldnames = reader.fieldnames or []
-        total_votes = 0.0
-        vote_count = 0
-
-        print("\nMissing data in incomplete dataset:")
-        found_missing = False
-
-        for line_number, row in enumerate(reader, start=2):
-            for column in fieldnames:
-                value = row.get(column)
-                if value is None or value.strip() == "":
-                    print(f"Missing cell at row {line_number}, column {column}")
-                    found_missing = True
-
-            vote = safe_float(row.get("votes"))
-            if vote is not None:
-                total_votes += vote
-                vote_count += 1
-
-        if not found_missing:
-            print("No missing cells found.")
-
-    print("\nAverage votes from incomplete dataset:")
-    print(total_votes / vote_count if vote_count else "No valid vote values found.")
-    print(
-        "A naive script fails because missing values cannot be converted directly "
-        "with float(). The fix is to skip or handle invalid values before converting."
-    )
-
-
-def main():
-    if not download_dataset("Birkbeck/movies", "movies.csv", MOVIES_PATH):
-        raise FileNotFoundError(
-            "movies.csv not found. Run from session2 after installing huggingface_hub."
-        )
-
-    if not download_dataset(
-        "Birkbeck/movies_incomplete",
-        "movies.csv",
-        INCOMPLETE_PATH,
-    ):
-        raise FileNotFoundError(
-            "data/movies_incomplete/movies.csv not found. "
-            "Download the incomplete dataset first."
-        )
-
-    print_main_dataset_answers(MOVIES_PATH)
-    print_incomplete_dataset_answers(INCOMPLETE_PATH)
-
-
-if __name__ == "__main__":
-    main()
