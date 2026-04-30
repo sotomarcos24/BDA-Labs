@@ -1,0 +1,36 @@
+Quiz: choose the better cleaning approach
+
+Essay Question:
+Assume that `my_data` is a list with many rows, and some values are missing (represented as empty strings "").
+
+You can:
+1. Clean in place (modify the original list directly), or
+2. Copy first to a new list, then clean the copied list.
+
+Compare the two approaches in terms of:
+- time complexity
+- space complexity
+- risk/safety
+
+Then explain which option you would choose for:
+- a quick one-off local script
+- a production workflow where raw data must be preserved
+
+Be specific with Big-O notation (for example `O(n)`, `O(1)`, `O(n)` extra space).
+
+Student Answer:
+Both approaches share the same time complexity of O(n), since we must iterate through every row to find and remove missing values regardless of whether we modify the original list or a copy.
+However, they differ in space complexity. Cleaning in place requires O(1) extra space, as we modify the existing list directly. Copying first requires O(n) extra space, since we must allocate memory for the new list before cleaning it.
+In terms of risk and safety, copying is the safer approach. If something goes wrong during the cleaning process, the original data remains untouched. Modifying the original list directly is irreversible — if an error occurs, the raw data is lost.
+For a quick one-off local script, I would clean in place. The data is not critical, the script is temporary, and the O(1) space efficiency is a reasonable trade-off.
+For a production workflow, I would always copy first. Preserving the raw data is essential — it allows for auditing, debugging, and reprocessing if the cleaning logic changes. The extra O(n) space cost is justified by the safety it ./end
+
+Score: 100.00%
+
+Feedback:
+- Did well: Correctly identified O(n) time and O(1) space for in-place cleaning.
+- Did well: Correctly identified O(n) time and O(n) space for copy-first cleaning.
+- Did well: Provided a clear explanation of why space complexity differs based on memory allocation.
+- Did well: Succinctly explained the risk of data loss with in-place modification.
+- Did well: Accurately distinguished between local scripts and production workflows with logical justifications for each choice.
+- Suggestion: Strengthen your answer by explicitly covering each rubric criterion.

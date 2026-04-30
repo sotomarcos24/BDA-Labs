@@ -1,0 +1,23 @@
+Quiz: Complexity Basics
+
+Essay Question:
+Describe the `time` complexity of:
+A) searching a number in an unsorted list
+B) searching a number in a sorted list using binary search
+C) sorting a list using bubble sort
+
+Provide a brief explanation for each case (for example, justify why the complexity is O(n)).
+
+Student Answer:
+A) Searching an unsorted list has a time complexity of O(n). Since the elements have no order, we must check each one sequentially until we find the target — in the worst case, it is the last element or not present at all.
+B) Searching a sorted list using binary search has a time complexity of O(log n). Each step halves the remaining search space by comparing the target with the middle element, so the number of steps grows logarithmically as n increases.
+C) Sorting a list using bubble sort has a time complexity of O(n²). The algorithm repeatedly passes through the list comparing adjacent elements. For a list of n elements, this results in approximately n × (n−1) / 2 comparisons, which simplifies to O(n²).
+
+Score: 100.00%
+
+Feedback:
+- Did well: Correctly identified O(n) for linear search with a valid justification regarding checking elements sequentially.
+- Did well: Correctly identified O(log n) for binary search and correctly noted that it applies to sorted lists.
+- Did well: Correctly explained the halving of the search space for binary search.
+- Did well: Correctly identified O(n²) for bubble sort and provided a clear explanation of pairwise comparisons.
+- Suggestion: Strengthen your answer by explicitly covering each rubric criterion.
