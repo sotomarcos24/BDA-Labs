@@ -1,0 +1,27 @@
+{
+  "mode": "essay",
+  "quiz_title": "Complexity Basics",
+  "question": "Describe the `time` complexity of:\nA) searching a number in an unsorted list\nB) searching a number in a sorted list using binary search\nC) sorting a list using bubble sort\n\nProvide a brief explanation for each case (for example, justify why the complexity is O(n)).",
+  "student_answer": "A) Searching an unsorted list has a time complexity of O(n). Since the elements have no order, we must check each one sequentially until we find the target — in the worst case, it is the last element or not present at all.\nB) Searching a sorted list using binary search has a time complexity of O(log n). Each step halves the remaining search space by comparing the target with the middle element, so the number of steps grows logarithmically as n increases.\nC) Sorting a list using bubble sort has a time complexity of O(n²). The algorithm repeatedly passes through the list comparing adjacent elements. For a list of n elements, this results in approximately n × (n−1) / 2 comparisons, which simplifies to O(n²).",
+  "points_awarded": 6.0,
+  "total_points": 6,
+  "score_percent": 100.0,
+  "did_well": [
+    "Correctly identified O(n) for linear search with a valid justification regarding checking elements sequentially.",
+    "Correctly identified O(log n) for binary search and correctly noted that it applies to sorted lists.",
+    "Correctly explained the halving of the search space for binary search.",
+    "Correctly identified O(n²) for bubble sort and provided a clear explanation of pairwise comparisons."
+  ],
+  "missing": [],
+  "suggestions": [
+    "Strengthen your answer by explicitly covering each rubric criterion."
+  ],
+  "ai_unavailable": false,
+  "ai_error": "",
+  "ai_reason": "none",
+  "scoring_mode": "llm_rubric",
+  "scoring_confidence": "high",
+  "ai_provider": "gemini",
+  "ai_provider_requested": "auto",
+  "ai_model": "gemini-flash-latest"
+}

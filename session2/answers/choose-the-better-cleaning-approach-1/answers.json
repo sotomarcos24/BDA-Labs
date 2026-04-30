@@ -1,0 +1,28 @@
+{
+  "mode": "essay",
+  "quiz_title": "choose the better cleaning approach",
+  "question": "Assume that `my_data` is a list with many rows, and some values are missing (represented as empty strings \"\").\n\nYou can:\n1. Clean in place (modify the original list directly), or\n2. Copy first to a new list, then clean the copied list.\n\nCompare the two approaches in terms of:\n- time complexity\n- space complexity\n- risk/safety\n\nThen explain which option you would choose for:\n- a quick one-off local script\n- a production workflow where raw data must be preserved\n\nBe specific with Big-O notation (for example `O(n)`, `O(1)`, `O(n)` extra space).",
+  "student_answer": "Both approaches share the same time complexity of O(n), since we must iterate through every row to find and remove missing values regardless of whether we modify the original list or a copy.\nHowever, they differ in space complexity. Cleaning in place requires O(1) extra space, as we modify the existing list directly. Copying first requires O(n) extra space, since we must allocate memory for the new list before cleaning it.\nIn terms of risk and safety, copying is the safer approach. If something goes wrong during the cleaning process, the original data remains untouched. Modifying the original list directly is irreversible — if an error occurs, the raw data is lost.\nFor a quick one-off local script, I would clean in place. The data is not critical, the script is temporary, and the O(1) space efficiency is a reasonable trade-off.\nFor a production workflow, I would always copy first. Preserving the raw data is essential — it allows for auditing, debugging, and reprocessing if the cleaning logic changes. The extra O(n) space cost is justified by the safety it ./end",
+  "points_awarded": 4.0,
+  "total_points": 4,
+  "score_percent": 100.0,
+  "did_well": [
+    "Correctly identified O(n) time and O(1) space for in-place cleaning.",
+    "Correctly identified O(n) time and O(n) space for copy-first cleaning.",
+    "Provided a clear explanation of why space complexity differs based on memory allocation.",
+    "Succinctly explained the risk of data loss with in-place modification.",
+    "Accurately distinguished between local scripts and production workflows with logical justifications for each choice."
+  ],
+  "missing": [],
+  "suggestions": [
+    "Strengthen your answer by explicitly covering each rubric criterion."
+  ],
+  "ai_unavailable": false,
+  "ai_error": "",
+  "ai_reason": "none",
+  "scoring_mode": "llm_rubric",
+  "scoring_confidence": "high",
+  "ai_provider": "gemini",
+  "ai_provider_requested": "auto",
+  "ai_model": "gemini-flash-latest"
+}
