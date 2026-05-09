@@ -26,15 +26,40 @@ def book_chunks(path, chunk_size=30, max_chunks=3):
                 continue
 
             # Provide here your solution
-            ...
+            chunk.append(line)
+            
+            if len(chunk) == chunk_size:
+                chunks_sent += 1
+                yield chunk
+                chunk = []
+
+            if chunks_sent == max_chunks:
+                break
 
     # Provide here your solution
-    ...
+    if chunks_sent < max_chunks and len(chunk) > 0:
+        yield chunk
+        
 
 
 def build_summary_prompt(chunk_text, chunk_number):
     # Provide here your solution
-    ...
+    return f"""
+    You are summarizing one chunk from Les Misérables.
+
+    Return only valid JSON with these keys:
+    - chunk: the chunk number
+    - characters: important character names mentioned
+    - events: short event descriptions
+    - summary: a 2-3 sentence summary
+    - uncertainty: anything unclear
+
+    Chunk number:
+    {chunk_number}
+
+    Excerpt:
+    {chunk_text}
+    """
 
 
 for chunk_number, chunk_text in enumerate(
