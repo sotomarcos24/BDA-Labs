@@ -2,7 +2,6 @@ import multiprocessing as mp
 import random
 import time
 
-
 def bubble_sort(arr):
     n = len(arr)
 
@@ -18,33 +17,33 @@ def generate_and_sort_numbers(n=10000):
     numbers = [random.random() for _ in range(n)]
     bubble_sort(numbers)
 
-
 def serial_runner(runs=3):
     start = time.perf_counter()
 
-    # TODO: call generate_and_sort_numbers() runs times
-    # Note: while this TODO is not filled, timing is not meaningful.
-    ...
+    #TODO: call generate_and_sort_numbers() runs times
+    for i in range(runs):
+        generate_and_sort_numbers()
 
     end = time.perf_counter()
     return end - start
-
 
 def parallel_runner(runs=3):
     start = time.perf_counter()
 
-    # Keep references to processes so we can join them later.
     processes = []
 
     # TODO: create runs processes
+    for i in range(runs):
+        processes.append(mp.Process(target=generate_and_sort_numbers, args=(runs, )))
     # TODO: start each process
+    for i in range(runs):
+        processes[i].start()
     # TODO: wait for each process to finish
-    # Note: while this TODO is not filled, timing is not meaningful.
-    ...
+    for i in range(runs):
+        processes[i].join()
 
     end = time.perf_counter()
     return end - start
-
 
 if __name__ == "__main__":
     serial_time = serial_runner(runs=3)
