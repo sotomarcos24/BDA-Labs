@@ -24,17 +24,11 @@ message_lock = threading.Lock()
 
 
 def log(message):
-    # TODO: use message_lock so messages do not mix together
-    ...
     with message_lock:
         print(message)
 
 
 def print_file(filename, available_printers):
-    # TODO: get an available printer from the queue
-    # TODO: simulate print time with time.sleep(...)
-    # TODO: return the printer to the queue
-    ...
     start = time.perf_counter()
     try:
         log(f"[WAITING] {filename} is waiting for a printer")
@@ -52,9 +46,6 @@ def print_file(filename, available_printers):
 if __name__ == "__main__":
     available_printers = Queue()
 
-    # TODO: add all printers to the queue
-    # TODO: run all jobs with ThreadPoolExecutor
-    ...
     for printer in printers:
         available_printers.put(printer)
 
