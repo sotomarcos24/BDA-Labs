@@ -1,0 +1,258 @@
+{
+  "quiz_title": "Session 9 Part 3 Quiz (Rankings and Summary Tables)",
+  "score": 10,
+  "score_total": 10,
+  "total_questions": 10,
+  "answers": [
+    {
+      "question_title": "Question 1",
+      "question_text": "What does a one-row-per-service summary do?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. Aggregates many event rows into one summary row for each service",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. Aggregates many event rows into one summary row for each service",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Grouped summaries make comparison easier."
+    },
+    {
+      "question_title": "Question 2",
+      "question_text": "Which function measures variability in latency?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. `stddev`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. `stddev`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`stddev` measures how spread out values are."
+    },
+    {
+      "question_title": "Question 3",
+      "question_text": "Which Spark feature is used to rank rows?",
+      "selected_indexes": [
+        4
+      ],
+      "selected_labels": "4. Window functions",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        4
+      ],
+      "correct_labels": "4. Window functions",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Window functions can rank rows based on ordered values."
+    },
+    {
+      "question_title": "Question 4",
+      "question_text": "What does `dense_rank` do?",
+      "selected_indexes": [
+        1
+      ],
+      "selected_labels": "1. Assigns ranks, giving tied values the same rank without gaps",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        1
+      ],
+      "correct_labels": "1. Assigns ranks, giving tied values the same rank without gaps",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`dense_rank` is useful for readable rankings."
+    },
+    {
+      "question_title": "Question 5",
+      "question_text": "What does `Window.partitionBy(\"service\")` do in the busiest-hour calculation?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. Ranks hours separately for each service",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. Ranks hours separately for each service",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Partitioning by service creates a separate ranking group for each service."
+    },
+    {
+      "question_title": "Question 6",
+      "question_text": "Which rank should put the highest total traffic first?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. `traffic_rank`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. `traffic_rank`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`traffic_rank` is ordered by total traffic descending."
+    },
+    {
+      "question_title": "Question 7",
+      "question_text": "Which rank should put the lowest average error rate first?",
+      "selected_indexes": [
+        4
+      ],
+      "selected_labels": "4. `reliability_rank`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        4
+      ],
+      "correct_labels": "4. `reliability_rank`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "The most reliable service has the lowest average error rate."
+    },
+    {
+      "question_title": "Question 8",
+      "question_text": "Why does Spark usually write CSV output as a folder?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. Spark is designed for distributed output with part files",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. Spark is designed for distributed output with part files",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Distributed jobs can write multiple part files into one output folder."
+    },
+    {
+      "question_title": "Question 9",
+      "question_text": "Which final project task is most similar to `traffic_rank`?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. Activity ranking",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. Activity ranking",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Both rank entities by activity-related metrics."
+    },
+    {
+      "question_title": "Question 10",
+      "question_text": "Which final project task is most similar to `latency_variability_rank`?",
+      "selected_indexes": [
+        4
+      ],
+      "selected_labels": "4. Volatility ranking",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        4
+      ],
+      "correct_labels": "4. Volatility ranking",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Both rank entities by variability."
+    }
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "quiz_title": "Session 9 Part 1 Quiz (Spark CSV Loading)",
+  "score": 10,
+  "score_total": 10,
+  "total_questions": 10,
+  "answers": [
+    {
+      "question_title": "Question 1",
+      "question_text": "Why do we define an explicit schema before loading the CSV?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. To control column data types instead of relying on Spark guesses",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. To control column data types instead of relying on Spark guesses",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "An explicit schema helps Spark read timestamps and numeric columns correctly."
+    },
+    {
+      "question_title": "Question 2",
+      "question_text": "Which option tells Spark that the first CSV row contains column names?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. `.option(\"header\", True)`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. `.option(\"header\", True)`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`header=True` uses the first row as column names."
+    },
+    {
+      "question_title": "Question 3",
+      "question_text": "Which Spark type is appropriate for `event_time`?",
+      "selected_indexes": [
+        4
+      ],
+      "selected_labels": "4. TimestampType",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        4
+      ],
+      "correct_labels": "4. TimestampType",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`TimestampType` stores date and time values."
+    },
+    {
+      "question_title": "Question 4",
+      "question_text": "What does `events_df.printSchema()` show?",
+      "selected_indexes": [
+        1
+      ],
+      "selected_labels": "1. Column names and data types",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        1
+      ],
+      "correct_labels": "1. Column names and data types",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`printSchema` shows the DataFrame structure."
+    },
+    {
+      "question_title": "Question 5",
+      "question_text": "Which command counts rows in the DataFrame?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. `events_df.count()`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. `events_df.count()`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`count()` triggers Spark to count rows."
+    },
+    {
+      "question_title": "Question 6",
+      "question_text": "What does `createOrReplaceTempView(\"service_events\")` do?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. Gives the DataFrame a SQL name for the current Spark session",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. Gives the DataFrame a SQL name for the current Spark session",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "A temporary view lets Spark SQL query the DataFrame by name."
+    },
+    {
+      "question_title": "Question 7",
+      "question_text": "Which query lists the distinct services?",
+      "selected_indexes": [
+        4
+      ],
+      "selected_labels": "4. `SELECT DISTINCT service FROM service_events`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        4
+      ],
+      "correct_labels": "4. `SELECT DISTINCT service FROM service_events`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`SELECT DISTINCT` returns unique values."
+    },
+    {
+      "question_title": "Question 8",
+      "question_text": "What happens to a temporary view when Spark stops?",
+      "selected_indexes": [
+        2
+      ],
+      "selected_labels": "2. It disappears",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        2
+      ],
+      "correct_labels": "2. It disappears",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Temporary views live only inside the current Spark session."
+    },
+    {
+      "question_title": "Question 9",
+      "question_text": "Which dataset is used in Session 9 Part 1?",
+      "selected_indexes": [
+        3
+      ],
+      "selected_labels": "3. `service_events.csv`",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        3
+      ],
+      "correct_labels": "3. `service_events.csv`",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "Session 9 Part 1 uses the service activity log dataset named `service_events.csv`."
+    },
+    {
+      "question_title": "Question 10",
+      "question_text": "Why should Spark be stopped at the end?",
+      "selected_indexes": [
+        1
+      ],
+      "selected_labels": "1. To release Spark session resources",
+      "selected_imposters": [],
+      "selected_imposter_labels": "",
+      "correct_indexes": [
+        1
+      ],
+      "correct_labels": "1. To release Spark session resources",
+      "expected_imposters": [],
+      "expected_imposter_labels": "",
+      "is_correct": true,
+      "result_label": "Correct",
+      "answer_correct": true,
+      "question_points": 1,
+      "question_max_points": 1,
+      "imposter_true_positive": 0,
+      "imposter_false_positive": 0,
+      "imposter_false_negative": 0,
+      "explanation": "`spark.stop()` releases resources used by the Spark session."
+    }
+  ]
+}

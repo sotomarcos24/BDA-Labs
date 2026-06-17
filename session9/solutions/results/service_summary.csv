@@ -1,0 +1,5 @@
+service,total_records,total_requests,total_errors,average_error_rate,average_latency_ms,latency_stddev,total_traffic_mb,busiest_hour,traffic_rank,latency_variability_rank,reliability_rank
+recommendations,6,9880,119,0.0119,140.75,16.62,723.65,3,1,2,3
+search,6,13080,75,0.0057,94.02,5.66,614.26,3,2,3,2
+payments,6,5590,136,0.0243,174.63,22.91,407.89,9,3,1,4
+auth,6,7580,39,0.0051,79.63,4.15,305.56,9,4,4,1

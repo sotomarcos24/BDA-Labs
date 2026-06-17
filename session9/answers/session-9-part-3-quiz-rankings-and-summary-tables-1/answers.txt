@@ -1,0 +1,92 @@
+Quiz: Session 9 Part 3 Quiz (Rankings and Summary Tables)
+Score: 10/10
+
+Question 1
+What does a one-row-per-service summary do?
+Selected: 2. Aggregates many event rows into one summary row for each service
+Correct: 2. Aggregates many event rows into one summary row for each service
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Grouped summaries make comparison easier.
+
+Question 2
+Which function measures variability in latency?
+Selected: 3. `stddev`
+Correct: 3. `stddev`
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: `stddev` measures how spread out values are.
+
+Question 3
+Which Spark feature is used to rank rows?
+Selected: 4. Window functions
+Correct: 4. Window functions
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Window functions can rank rows based on ordered values.
+
+Question 4
+What does `dense_rank` do?
+Selected: 1. Assigns ranks, giving tied values the same rank without gaps
+Correct: 1. Assigns ranks, giving tied values the same rank without gaps
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: `dense_rank` is useful for readable rankings.
+
+Question 5
+What does `Window.partitionBy("service")` do in the busiest-hour calculation?
+Selected: 2. Ranks hours separately for each service
+Correct: 2. Ranks hours separately for each service
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Partitioning by service creates a separate ranking group for each service.
+
+Question 6
+Which rank should put the highest total traffic first?
+Selected: 3. `traffic_rank`
+Correct: 3. `traffic_rank`
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: `traffic_rank` is ordered by total traffic descending.
+
+Question 7
+Which rank should put the lowest average error rate first?
+Selected: 4. `reliability_rank`
+Correct: 4. `reliability_rank`
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: The most reliable service has the lowest average error rate.
+
+Question 8
+Why does Spark usually write CSV output as a folder?
+Selected: 2. Spark is designed for distributed output with part files
+Correct: 2. Spark is designed for distributed output with part files
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Distributed jobs can write multiple part files into one output folder.
+
+Question 9
+Which final project task is most similar to `traffic_rank`?
+Selected: 3. Activity ranking
+Correct: 3. Activity ranking
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Both rank entities by activity-related metrics.
+
+Question 10
+Which final project task is most similar to `latency_variability_rank`?
+Selected: 4. Volatility ranking
+Correct: 4. Volatility ranking
+Imposters flagged: -
+Expected imposters: -
+Result: Correct
+Explanation: Both rank entities by variability.
